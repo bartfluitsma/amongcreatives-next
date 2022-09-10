@@ -1,0 +1,28 @@
+import SecondaryButton from "./secondaryButton"
+
+const AboutSectionHome = () => {
+    return (
+        <>
+            <div className="px-4 py-10 md:flex xl:px-40 md:items-center md:text-center md:justify-center">
+                <div className="md:w-6/12 md:p-10 md:grid md:place-items-center">
+                    <h2>
+                        Hi, I’m Nass, a Fashion, lifestyle and product photographer for sustainable and conscious businesses.
+                    </h2>
+                    <div className="h-[2px] w-2/3 md:w-2/4 my-10 md:my-4 m-auto bg-primary"></div>
+                    <p>I love creating fresh, minimalistic and clear visuals that will boost your sales and get your audience to stop scrolling!</p>
+                    <p>I offer creative and thoughtful content that reflects your brand and tells your products' stories that set your customer expectation.
+                    </p>
+                    <p>I am working remotely, simply send me your products and I’ll photograph them and send them back (as easy as that).
+                    </p>
+                    <p className="mb-8 md:mb-5">I can’t wait to know more about your lovely business :)</p>
+                    <SecondaryButton link="/contact">Let's work together</SecondaryButton>
+                </div>
+                <div className="mt-10 md:w-5/12 md:p-8">
+                    <img className="mb-8 rounded-xl rounded-tr-[30%]" src="/homepage/nass-product-photographer-working.jpg" alt="" />
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default AboutSectionHome;

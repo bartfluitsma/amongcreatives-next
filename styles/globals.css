@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Forum, system-ui, serif;
+    }
+}
+
+body {
+    font-size: 62.5%;
+}
+
+/* color pallete */
+:root {
+    --primaryColor: #e2c8aa;
+    --secondaryColor: #ebdfd3;
+    --accentColor: #fbf8f1;
+    --darkColor: #4f4f4f;
+    --lightColor: #f7f7f7;
+}
+
+/* fonts & headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Cormorant";
+    color: var(--darkColor);
+    line-height: 100%;
+    margin: 15px 0px;
+}
+
+h1 {
+    font-size: 3.8em;
+}
+
+h2 {
+    font-size: 2.8em;
+    line-height: 110%;
+}
+
+p,
+a,
+q,
+button {
+    color: var(--darkColor);
+    font-family: "Forum";
+    font-weight: initial;
+    letter-spacing: 1px;
+    font-size: 1.6em;
+    margin: 10px 0px;
+}
+
+nav a {
+    font-size: 2.2em;
+}
+
+@media (min-width: 950px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 110%;
+    }
+
+    h1 {
+        font-size: 5.4em;
+    }
+
+    h2{
+        font-size: 3;
+    }
+
+    p,
+    a,
+    q,
+    button {
+        font-size: 1.9em;
+    }
+}
