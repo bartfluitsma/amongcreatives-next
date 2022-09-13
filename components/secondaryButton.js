@@ -4,7 +4,7 @@ const SecondaryButton = ({ children, link }) => {
     return (
         <>
             <Link href={link}>
-                <div className="bg-transparent py-3 px-5 my-4 text-[16px] w-fit cursor-pointer md:text-[18px] border-2 border-darkColor hover:bg-darkColor hover:text-white">
+                <div className="bg-transparent py-3 px-8 my-4 w-fit cursor-pointer border-2 border-darkColor hover:bg-darkColor hover:text-white btn">
                     {children}
                 </div>
             </Link>

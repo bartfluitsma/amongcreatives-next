@@ -4,7 +4,7 @@ import SecondaryButton from "./secondaryButton";
 const ImagesGridLayout = () => {
     return (
         <>
-            <div className="px-4 py-20 md:py-28">
+            <div className="px-4 pt-20 pb-10 md:pt-28">
                 <Link href="/portfolio">
                     <div className="grid grid-cols-gridImageTemplateColumn grid-rows-4 md:grid-cols-4 md:grid-rows-2 gap-2 cursor-pointer max-w-5xl m-auto">
                         <div className="hover:brightness-105 bg-cover bg-center bg-[url('/Woman-wearing-slow-fashion-clothing-on-beach.jpg')] min-h-[250px] sm:min-h-[350px] md:min-h-[320px] h-full min-w-full"></div>
@@ -14,7 +14,7 @@ const ImagesGridLayout = () => {
                     </div>
                 </Link>
                 <div className="pt-10 grid place-items-center">
-                    <SecondaryButton link="/">View portfolio</SecondaryButton>
+                    <SecondaryButton link="/portfolio">View portfolio</SecondaryButton>
                 </div>
             </div>
         </>

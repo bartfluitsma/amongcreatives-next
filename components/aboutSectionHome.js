@@ -1,3 +1,4 @@
+import Divider from "./divider";
 import SecondaryButton from "./secondaryButton"
 
 const AboutSectionHome = () => {
@@ -5,10 +6,10 @@ const AboutSectionHome = () => {
         <>
             <div className="px-4 py-10 md:flex xl:px-40 md:items-center md:text-center md:justify-center">
                 <div className="md:w-6/12 md:p-10 md:grid md:place-items-center">
-                    <h2>
+                    <h2 className="text-4xl lg:text-3xl">
                         Hi, I’m Nass, a Fashion, lifestyle and product photographer for sustainable and conscious businesses.
                     </h2>
-                    <div className="h-[2px] w-2/3 md:w-2/4 my-10 md:my-4 m-auto bg-primary"></div>
+                    <Divider />
                     <p>I love creating fresh, minimalistic and clear visuals that will boost your sales and get your audience to stop scrolling!</p>
                     <p>I offer creative and thoughtful content that reflects your brand and tells your products' stories that set your customer expectation.
                     </p>

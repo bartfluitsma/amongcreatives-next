@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    html {
-        font-family: Forum, system-ui, serif;
-    }
-}
-
-body {
-    font-size: 62.5%;
-}
-
 /* color pallete */
 :root {
     --primaryColor: #e2c8aa;
@@ -21,43 +11,67 @@ body {
     --lightColor: #f7f7f7;
 }
 
-/* fonts & headers */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Cormorant";
-    color: var(--darkColor);
-    line-height: 100%;
-    margin: 15px 0px;
+@layer base {
+    html {
+        font-family: 'Forum', system-ui, serif;
+        color: var(--darkColor);
+        font-size: 16px;
+    }
+
+    p,
+    a,
+    q,
+    button {
+        color: var(--darkColor);
+        font-family: theme('fontFamily.Forum');
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin: 10px 0px;
+        font-size: theme('fontSize.base');
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: theme('fontFamily.Cormorant');
+        color: var(--darkColor);
+        line-height: 100%;
+        margin: 15px 0px;
+    }
+
+    h1 {
+        font-size: theme('fontSize.6xl')
+    }
+
+    h2 {
+        font-size: theme('fontSize.5xl');
+        line-height: 110%;
+    }
+
+    h3 {
+        font-size: theme('fontSize.4xl');
+    }
+
+    h4 {
+        font-size: theme('fontSize.3xl');
+    }
+
+
+    nav a {
+        font-size: theme('fontSize.lg');
+    }
+
 }
 
-h1 {
-    font-size: 3.8em;
+@layer components {
+    .btn {
+        font-size: theme('fontSize.base');
+    }
 }
 
-h2 {
-    font-size: 2.8em;
-    line-height: 110%;
-}
-
-p,
-a,
-q,
-button {
-    color: var(--darkColor);
-    font-family: "Forum";
-    font-weight: initial;
-    letter-spacing: 1px;
-    font-size: 1.6em;
-    margin: 10px 0px;
-}
-
-nav a {
-    font-size: 2.2em;
-}
 
 @media (min-width: 950px) {
 
@@ -70,18 +84,4 @@ nav a {
         line-height: 110%;
     }
 
-    h1 {
-        font-size: 5.4em;
-    }
-
-    h2{
-        font-size: 3;
-    }
-
-    p,
-    a,
-    q,
-    button {
-        font-size: 1.9em;
-    }
 }

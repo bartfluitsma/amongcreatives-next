@@ -9,7 +9,7 @@ const Navbar = () => {
     const ActiveLink = {
         borderBottom: `4px solid #d5d5c9`,
     }
-    const LinkStyles = `mx-1 mb-0 my-4 lg:my-auto py-3 px-8 font-semibold`
+    const LinkStyles = `mx-[.25vw] mb-0 my-4 lg:my-auto py-3 px-[2vw] font-semibold`
     const hoverStyles = `hover:border-b-4 hover:border-accent`
 
     // change style of menu on click
@@ -39,15 +39,14 @@ const Navbar = () => {
                         <Image className='w-10 z-20'
                             src='/logo-among-creatives-small.svg'
                             alt='Among Creatives logo small'
-                            placeholder="blurred"
+                            // placeholder="blurred"
                             width={40}
                             height={40}
                         />
                     </a>
-
                 </Link>
 
-                <ul className={style ? 'h-screen lg:h-10 absolute lg:relative pt-[40%] sm:pt-32 lg:pt-0 bg-white lg:bg-transparent w-full lg:w-auto z-10 text-center lg:flex ease-in duration-300 -translate-x-full transition-transform lg:translate-x-0' : 'pt-[40%] ease-in duration-300 h-screen absolute transition-transform bg-white w-full z-10 text-center lg:flex sm:pt-32 min-h-[500px]'}>
+                <ul className={style ? 'h-screen lg:h-10 absolute lg:relative pt-[40%] sm:pt-32 lg:pt-0 bg-white lg:bg-transparent w-full lg:w-auto z-10 text-center lg:flex lg:justify-between ease-in duration-300 -translate-x-full transition-transform lg:translate-x-0' : 'pt-[40%] ease-in duration-300 h-screen absolute transition-transform bg-white w-full z-10 text-center lg:flex sm:pt-32 min-h-[500px] lg:justify-between'}>
                     <li className={LinkStyles}><Link className={hoverStyles} href="/" activeStyle={ActiveLink}>Home</Link></li>
                     <li className={LinkStyles}><Link className={hoverStyles} href='/about' activeStyle={ActiveLink}>About</Link></li>
                     <li className={LinkStyles}><Link className={hoverStyles} href='/portfolio/' activeStyle={ActiveLink}>Portfolio</Link></li>
@@ -57,9 +56,9 @@ const Navbar = () => {
                                 <Image
                                     src='/logo-among-creatives.svg'
                                     alt='Among Creatives logo'
-                                    placeholder="blurred"
-                                    width={130}
-                                    height={50}
+                                    // placeholder="blurred"
+                                    width='120%'
+                                    height={55}
                                 />
                             </a>
                         </Link>
@@ -68,7 +67,7 @@ const Navbar = () => {
                     <li className={LinkStyles}><Link className={hoverStyles} href='/contact' activeStyle={ActiveLink}>Contact</Link></li>
                     <li className={LinkStyles}>
                         <Link href='/book'>
-                            <a className="text-white bg-primary py-3 px-8">Book</a>
+                            <a className="bg-accent py-3 px-8 shadow-softShadow">Book a shoot</a>
                         </Link>
                     </li>
                 </ul>

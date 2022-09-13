@@ -5,6 +5,8 @@ import HeroSectionHomepage from "../components/heroSectionHome"
 import AboutSectionHome from "../components/aboutSectionHome"
 import Banner from "../components/banner"
 import ImagesGridLayout from "../components/imagesGridLayout"
+import PackagesCarousel from "../components/packagesCarousel"
+import InstagramBanner from "../components/instagramBanner"
 
 const Home: NextPage = () => {
     return (
@@ -21,6 +23,8 @@ const Home: NextPage = () => {
             </Banner>
 
             <ImagesGridLayout />
+            <PackagesCarousel />
+            <InstagramBanner />
 
         </div>
     )
