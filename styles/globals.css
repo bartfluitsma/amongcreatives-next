@@ -19,51 +19,55 @@
     }
 }
 
-    p,
-    a,
-    q,
-    button {
-        color: var(--darkColor);
-        font-family: theme('fontFamily.Forum');
-        font-weight: 200;
-        letter-spacing: 1px;
-        margin: 10px 0px;
-        font-size: theme('fontSize.base');
-    }
+p,
+a,
+q,
+button {
+    color: var(--darkColor);
+    font-family: theme('fontFamily.Forum');
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    font-size: theme('fontSize.base');
+}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: theme('fontFamily.Cormorant');
-        color: var(--darkColor);
-        line-height: 100%;
-        margin: 15px 0px;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: theme('fontFamily.Cormorant');
+    color: var(--darkColor);
+    line-height: 100%;
+    margin: 15px 0px;
+}
 
-    h1 {
-        font-size: theme('fontSize.6xl')
-    }
+h1 {
+    font-size: theme('fontSize.6xl')
+}
 
-    h2 {
-        font-size: theme('fontSize.5xl');
-        line-height: 110%;
-    }
+h2 {
+    font-size: theme('fontSize.5xl');
+    line-height: 110%;
+}
 
-    h3 {
-        font-size: theme('fontSize.4xl');
-    }
+h3 {
+    font-size: theme('fontSize.4xl');
+}
 
-    h4 {
-        font-size: theme('fontSize.3xl');
-    }
+h4 {
+    font-size: theme('fontSize.3xl');
+}
 
 
-    nav a {
-        font-size: theme('fontSize.lg');
-    }
+nav a {
+    font-size: theme('fontSize.lg');
+}
+
+img {
+    max-width: 100%;
+}
 
 
 @layer components {
