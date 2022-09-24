@@ -9,7 +9,7 @@ const PortfolioTitles = ({ category }) => {
                         <Link href={`/portfolio/${category.attributes.path.toString().toLowerCase()}`} >
                             <h2 className='text-right mb-0 hover:brightness-0'>{category.attributes.Category}</h2>
                         </Link>
-                            <div className="mt-0 h-[2px] bg-secondary w-auto hover:bg-primary "></div>
+                        <div className="mt-0 h-[2px] bg-secondary w-auto hover:bg-primary "></div>
                     </div>
                 )
             })}

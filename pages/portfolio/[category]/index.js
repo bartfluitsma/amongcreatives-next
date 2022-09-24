@@ -1,5 +1,6 @@
-import CategoryCard from "../../components/portfolio/categoryCard";
-import { fetcher } from "../../lib/api";
+import CategoryCard from "../../../components/portfolio/categoryCard";
+import VerticalText from "../../../components/verticalTitle";
+import { fetcher } from "../../../lib/api";
 
 export const getStaticPaths = async () => {
   const categoryPathResponse = await fetcher(
@@ -22,7 +23,8 @@ export const getStaticPaths = async () => {
 export async function getStaticProps(context) {
   const category = context.params.category;
   const categoryPropsResponse = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/${category}?populate=*`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/categories?filters[path][$eq]=${category}&?populate[0]=clients&populate[1]=clients.thumbnail`
+
   );
 
   return {
@@ -36,12 +38,11 @@ const CategoryOverviewPage = ({ category }) => {
 
   return (
     <>
-      {console.log(data)}
       <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
         <div>
-          <h1 className="[writing-mode:vertical-lr] [-webkit-writing-mode: vertical-lr] [-ms-writing-mode: vertical-lr] rotate-180 text-center">
+          <VerticalText>
             {categoryTitle}
-          </h1>
+          </VerticalText>
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_250px))] gap-4 lg:gap-8 ml-4 lg:ml-32 max-w-[82vw]">
           <CategoryCard data={data} />

@@ -1,10 +1,10 @@
-import PackageCarouselCard from './packageCarouselCard'
+import PackageCarouselCard from '../packages/packageCarouselCard'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import PrimaryButton from './primaryButton';
-import { dataPackages } from '../data/index'
-import Divider from './divider'
+import PrimaryButton from '../primaryButton';
+import Divider from '../divider'
+import { dataPackages } from '../../data/index'
 
 const PackagesCarousel = () => {
 
@@ -30,7 +30,7 @@ const PackagesCarousel = () => {
                     infinite: true,
                     dots: true,
                     swipeToSlide: true,
-                    autoplay: true,
+                    autoplay: false,
                     autoplaySpeed: 3000,
                 },
             },
@@ -39,7 +39,8 @@ const PackagesCarousel = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    dots: false,
+                    dots: true,
+                    autoplay: false,
                     swipeToSlide: true,
                 },
             },
@@ -48,9 +49,10 @@ const PackagesCarousel = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: false,
+                    dots: true,
                     swipeToSlide: true,
                     arrows: false,
+                    autoplay: false,
                     centerMode: true,
                     // centerPadding: '29px 0px 0px',
                 },

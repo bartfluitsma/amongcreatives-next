@@ -21,7 +21,7 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
     return (
         <>
             <div className="w-full overflow-hidden">
-                <div className="ml-4 my-4 w-full md:max-w-[65vw] lg:max-w-[55vw] xl:max-w-[65vw]">
+                <div className="ml-4 my-4 w-full md:max-w-[65vw] lg:max-w-[55vw] xl:max-w-[65vw] ">
                     <Slider {...settings}>
                         {portfolioImages && portfolioImages.data.map((image, idx) =>
                             !isBreakpoint ? (

@@ -1,5 +1,6 @@
 import PortfolioImageSlider from "../../components/portfolio/portfolioImageSlider";
 import PortfolioTitles from "../../components/portfolio/portfolioTitles";
+import VerticalTitle from "../../components/verticalTitle";
 import { fetcher } from "../../lib/api";
 
 const PortfolioPage = ({ category, categoryImages }) => {
@@ -12,7 +13,7 @@ const PortfolioPage = ({ category, categoryImages }) => {
                         <PortfolioTitles category={category} />
                     </div>
                     <div className="flex order-1">
-                        <h1 className="[writing-mode:vertical-lr] [-webkit-writing-mode: vertical-lr] [-ms-writing-mode: vertical-lr] rotate-180 text-center">Portfolio</h1>
+                        <VerticalTitle>Portfolio</VerticalTitle>
                         <PortfolioImageSlider portfolioImages={categoryImages} />
                     </div>
                 </div>

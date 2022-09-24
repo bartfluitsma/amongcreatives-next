@@ -29,4 +29,22 @@ export const dataPackages = [
         image: "Woman-wearing-slow-fashion-clothing-on-beach.jpg",
         anchor: "#minishoot",
     }]
-  
+
+export const packageDetails = [
+    {
+        url: "/Woman-wearing-slow-fashion-clothing-on-beach.jpg",
+        name: "Mini Shoot",
+        description: "This package is perfect to try out!",
+        amount: "Up to 20 images",
+        reverse: false,
+        iden: 'mini-shoot',
+    },
+    {
+        url: "/Woman-wearing-slow-fashion-clothing-on-beach.jpg",
+        name: "Mini Shoot",
+        description: "This package is perfect to try out!",
+        amount: "Up to 20 images",
+        reverse: true,
+        iden: '',
+    },
+];

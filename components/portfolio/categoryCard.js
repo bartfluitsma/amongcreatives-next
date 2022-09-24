@@ -6,10 +6,51 @@ const CategoryCard = ({ data }) => {
   return (
     <>
       {data &&
+        data[0].attributes.clients.map((client, idx) => (
+          <div key={idx}>
+            <Link
+              href={`${data[0].attributes.path
+                .toString()
+                .toLowerCase()}/${client.name
+                .toLowerCase()
+                .replace(/\s+/g, "-")}`}
+              // .replace(/\s+/g, "-")
+              // .toLowerCase()}`}
+            >
+              <div>
+                <img
+                  // key={i}
+                  src={`${baseUrl}${client.thumbnail.data.attributes.url}`}
+                  alt={client.thumbnail.data.attributes.alternativeText}
+                />
+                <p className="text-xl mb-0 pb-0">{client.name}</p>
+                <p className="mt-[-5px] pt-0 text-sm">{client.description}</p>
+              </div>
+            </Link>
+          </div>
+        ))}
+    </>
+  );
+};
+
+export default CategoryCard;
+
+//           Array.isArray(item.attributes.Thumbnail.data)
+//             ? console.log("it is")
+//             : console.log("its not");
+
+{
+  /* <Link
+href={`${category.attributes.Category.toString().toLowerCase()}/${category.attributes.slug
+  }`}
+> */
+}
+
+{
+  /* {data &&
         data.map((category, idx) => {
           return (
             <div key={idx}>
-              {console.log(category.attributes.Category)}
               <Link
                 href={`${category.attributes.Category.toString().toLowerCase()}/${category.attributes.slug
                   }`}
@@ -46,13 +87,5 @@ const CategoryCard = ({ data }) => {
               </Link>
             </div>
           );
-        })}
-    </>
-  );
-};
-
-export default CategoryCard;
-
-//           Array.isArray(item.attributes.Thumbnail.data)
-//             ? console.log("it is")
-//             : console.log("its not");
+        })} */
+}
