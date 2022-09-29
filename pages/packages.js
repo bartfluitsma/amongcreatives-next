@@ -3,6 +3,7 @@ import SecondaryButton from "../components/secondaryButton";
 import Divider from "../components/divider";
 import BaseInfoPackages from "../components/packages/baseInfoPackages";
 import PackagesDetails from "../components/packages/packagesDetails";
+import SignupForm from "../components/signupForm";
 
 const PackagesPage = () => {
   return (
@@ -23,12 +24,26 @@ const PackagesPage = () => {
           </p>
         </div>
         <div className="grid place-items-center px-5">
-          <SecondaryButton link="/packages">Discover packages</SecondaryButton>
+          <SecondaryButton link="#packageDetails">
+            Discover packages
+          </SecondaryButton>
         </div>
       </div>
       <Divider />
       <BaseInfoPackages />
       <PackagesDetails />
+      <div className="text-center px-4 my-10 max-w-2xl m-auto grid place-items-center">
+        <p className="text-3xl">Cannot find any packages that suit you?</p>
+        <p>
+          No worry! just get in touch and we will work out together a custom
+          package that suits your exact needs.
+        </p>
+        <SecondaryButton link="/contact">Contact me</SecondaryButton>
+      </div>
+      <div className="my-20">
+        <Divider />
+      </div>
+      <SignupForm />
     </>
   );
 };

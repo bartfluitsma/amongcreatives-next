@@ -33,6 +33,7 @@ export const dataPackages = [
 export const packageDetails = [
     {
         url: "/Woman-wearing-slow-fashion-clothing-on-beach.jpg",
+        altText: 'Place alt text here',
         name: "Mini Shoot",
         description: "This package is perfect to try out!",
         amount: "Up to 20 images",
@@ -41,10 +42,29 @@ export const packageDetails = [
     },
     {
         url: "/Woman-wearing-slow-fashion-clothing-on-beach.jpg",
-        name: "Mini Shoot",
-        description: "This package is perfect to try out!",
-        amount: "Up to 20 images",
+        altText: 'Place alt text here',
+        name: "Refresh package",
+        description: "With this package you'll have more quality images of you products to share online.",
+        amount: "Up to 40 images",
         reverse: true,
-        iden: '',
+        iden: 'refresh-package',
+    },
+    {
+        url: "/Woman-wearing-slow-fashion-clothing-on-beach.jpg",
+        altText: 'Place alt text here',
+        name: "Complete package",
+        description: "A package that will enable you to have a complete set of images for a new product line or brand update.",
+        amount: "Up to 60 images",
+        reverse: false,
+        iden: 'complete-package',
+    },
+    {
+        url: "/Woman-wearing-slow-fashion-clothing-on-beach.jpg",
+        altText: 'Place alt text here',
+        name: "Monthly package",
+        description: "Make sure you’re good for some new photos each month! A new brief is reviewed each month to ensure the latest brand strategy.",
+        amount: "Up to 30 images per month",
+        reverse: true,
+        iden: 'monthly-package',
     },
 ];

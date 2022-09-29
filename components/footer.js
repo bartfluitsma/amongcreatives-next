@@ -7,7 +7,7 @@ const Footer = ({ instagramImagesResponse }) => {
       <InstagramCarousel images={instagramImagesResponse} />
       <div className="px-4 lg:px-20 bg-accent pt-10 pb-4">
         <div className="md:flex">
-          <ul className="grid grid-cols-[repeat(auto-fit,_minmax(auto,_150px))] gap-4 lg:gap-8 text-center max-w-xl lg:text-left">
+          <ul className="grid grid-cols-[repeat(auto-fit,_minmax(auto,_150px))] gap-4 lg:gap-8 text-center max-w-xl lg:text-left lg:ml-[7vw]">
             <li>
               <Link href="/"> Home</Link>
             </li>
@@ -27,7 +27,7 @@ const Footer = ({ instagramImagesResponse }) => {
               <Link href="/packages#welcomeguide"> Welcome guide</Link>
             </li>
             <li>
-              <Link href="/about#FAQ"> FAQ</Link>
+              <Link href="/about#faq"> FAQ</Link>
             </li>
             <li>
               <Link href="/book"> Book a shoot</Link>
