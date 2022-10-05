@@ -7,7 +7,7 @@ const FAQ = ({ faqs }) => {
                         <div className="w-full px-4 py-2 grid md:grid-cols-2 md:gap-5 md:gap-x-10">
                             {faqs.map((faq, idx) => {
                                 return (
-                                    <details>
+                                    <details key={idx}>
                                         <summary className="cursor-pointer font-semibold py-2 text-md">
                                             {faq.attributes.question}
                                         </summary>

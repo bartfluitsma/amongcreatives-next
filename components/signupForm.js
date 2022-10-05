@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
+import Spinner from "./spinner";
 
 const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -24,6 +26,7 @@ const MyTextInput = ({ label, ...props }) => {
 };
 
 const SignupForm = () => {
+  const [spinner, setSpinner] = useState(false);
   return (
     <div className="my-10 max-w-lg m-auto">
       <div className="text-center px-4">
@@ -54,6 +57,7 @@ const SignupForm = () => {
             .required("Required"),
         })}
         onSubmit={(values, { setSubmitting, setStatus }) => {
+          setSpinner(true);
           var myHeaders = new Headers();
           myHeaders.append("Content-Type", "application/json");
           var requestOptions = {
@@ -106,10 +110,12 @@ const SignupForm = () => {
                 />
                 <div className="grid place-items-center">
                   <button
+                    disabled={formik.isSubmitting}
                     type="submit"
-                    className="bg-accent py-2 px-6 shadow-softShadow"
+                    className="bg-accent py-2 px-6 shadow-softShadow flex"
                   >
                     Download welcome guide
+                    {spinner && spinner === true ? <Spinner /> : null}
                   </button>
                 </div>
               </>

@@ -43,7 +43,7 @@ const PackagesPage = () => {
       <div className="my-20">
         <Divider />
       </div>
-      <div className="px-4">
+      <div className="px-4" id="welcomeguide">
         <SignupForm />
       </div>
     </>

@@ -2,15 +2,15 @@ import useMediaQuery from "../helpers/breakpoints";
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+    const router = useRouter()
     const isBreakpoint = useMediaQuery(980)
 
     // link styles
-    const ActiveLink = {
-        borderBottom: `4px solid #d5d5c9`,
-    }
-    const LinkStyles = `mx-[.25vw] mb-0 my-4 lg:my-auto py-3 px-[2vw] font-semibold`
+    const ActiveLink = `border-b-4 pb-[2px] border-secondary`
+    const LinkStyles = `mx-[.25vw] mb-0 my-4 lg:my-auto py-3 px-[2vw]`
     const hoverStyles = `hover:border-b-4 hover:border-accent`
 
     // change style of menu on click
@@ -45,14 +45,38 @@ const Navbar = () => {
                         </a>
                     </Link>
                     <ul className={style ? 'h-screen lg:h-10 absolute lg:relative pt-[40%] sm:pt-32 lg:pt-0 bg-white lg:bg-transparent w-full lg:w-auto z-10 text-center lg:flex lg:justify-between ease-in duration-300 -translate-x-full transition-transform lg:translate-x-0' : 'pt-[40%] ease-in duration-300 h-screen absolute transition-transform bg-white w-full z-10 text-center lg:flex sm:pt-32 min-h-[500px] lg:justify-between'}>
-                        <li className={LinkStyles}><Link className={hoverStyles} href="/" activeStyle={ActiveLink}>Home</Link></li>
-                        <li className={LinkStyles}><Link className={hoverStyles} href='/about' activeStyle={ActiveLink}>About</Link></li>
-                        <li className={LinkStyles}><Link className={hoverStyles} href='/portfolio/' activeStyle={ActiveLink}>Portfolio</Link></li>
-                        <li className={LinkStyles}><Link className={hoverStyles} href='/packages' activeStyle={ActiveLink}>Packages</Link></li>
-                        <li className={LinkStyles}><Link className={hoverStyles} href='/contact' activeStyle={ActiveLink}>Contact</Link></li>
-                        <li className={LinkStyles}>
+                        <li onClick={changeStyle} className={LinkStyles}>
+                            <Link className={hoverStyles} href="/">
+                                <a className={router.pathname === "/" ? ActiveLink : null}>Home</a>
+                            </Link>
+                        </li>
+
+                        <li onClick={changeStyle} className={LinkStyles}>
+                            <Link href='/about'>
+                                <a className={router.pathname === "/about" ? ActiveLink : null}>About</a>
+                            </Link>
+                        </li>
+
+                        <li onClick={changeStyle} className={LinkStyles}>
+                            <Link href='/portfolio'>
+                                <a className={router.pathname === "/portfolio" ? ActiveLink : null}>Portfolio</a>
+                            </Link>
+                        </li>
+                        <li onClick={changeStyle} className={LinkStyles}>
+                            <Link href='/packages'>
+                                <a className={router.pathname === "/packages" ? ActiveLink : null}>Packages</a>
+                            </Link>
+                        </li>
+
+                        <li onClick={changeStyle} className={LinkStyles}>
+                            <Link href='/contact'>
+                                <a className={router.pathname === "/contact" ? ActiveLink : null}>Contact</a>
+                            </Link>
+                        </li>
+
+                        <li onClick={changeStyle} className={LinkStyles}>
                             <Link href='/book'>
-                                <a className="bg-accent py-3 px-8 shadow-softShadow">Book a shoot</a>
+                                <a className="bg-accent py-3 px-8 shadow-softShadow">Book now</a>
                             </Link>
                         </li>
                     </ul>
@@ -77,9 +101,25 @@ const Navbar = () => {
                                 </Link>
                             </div> */}
                             <ul className={' bg-white lg:bg-transparent w-full lg:w-auto lg:flex lg:justify-between lg:translate-x-0'}>
-                                <li className={LinkStyles}><Link className={hoverStyles} href="/" activeStyle={ActiveLink}>Home</Link></li>
-                                <li className={LinkStyles}><Link className={hoverStyles} href='/about' activeStyle={ActiveLink}>About</Link></li>
-                                <li className={LinkStyles}><Link className={hoverStyles} href='/portfolio/' activeStyle={ActiveLink}>Portfolio</Link></li>
+
+                                <li className={LinkStyles}>
+                                    <Link className={hoverStyles} href="/">
+                                        <a className={router.pathname === "/" ? ActiveLink : null}>Home</a>
+                                    </Link>
+                                </li>
+
+                                <li className={LinkStyles}>
+                                    <Link href='/about'>
+                                        <a className={router.pathname === "/about" ? ActiveLink : null}>About</a>
+                                    </Link>
+                                </li>
+
+                                <li className={LinkStyles}>
+                                    <Link href='/portfolio'>
+                                        <a className={router.pathname === "/portfolio" ? ActiveLink : null}>Portfolio</a>
+                                    </Link>
+                                </li>
+
                                 <ul className="mx-0 mb-0 my-4 lg:my-auto lg:mt-2 hidden lg:block">
                                     <Link href='/'>
                                         <a>
@@ -93,8 +133,19 @@ const Navbar = () => {
                                         </a>
                                     </Link>
                                 </ul>
-                                <li className={LinkStyles}><Link className={hoverStyles} href='/packages' activeStyle={ActiveLink}>Packages</Link></li>
-                                <li className={LinkStyles}><Link className={hoverStyles} href='/contact' activeStyle={ActiveLink}>Contact</Link></li>
+
+                                <li className={LinkStyles}>
+                                    <Link href='/packages'>
+                                        <a className={router.pathname === "/packages" ? ActiveLink : null}>Packages</a>
+                                    </Link>
+                                </li>
+
+                                <li className={LinkStyles}>
+                                    <Link href='/contact'>
+                                        <a className={router.pathname === "/contact" ? ActiveLink : null}>Contact</a>
+                                    </Link>
+                                </li>
+
                                 <li className={LinkStyles}>
                                     <Link href='/book'>
                                         <a className="bg-accent py-3 px-8 shadow-softShadow">Book now</a>
@@ -104,7 +155,8 @@ const Navbar = () => {
                         </div>
                     </nav>
                 </>
-            )}
+            )
+            }
         </>
     )
 }

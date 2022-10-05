@@ -25,6 +25,7 @@ module.exports = {
         '4xl': 'clamp(1.9em, 4vw, 2.5em)', // h3
         '5xl': 'clamp(2.2em, 4.5vw, 3em)', // h2
         '6xl': 'clamp(2.7em, 5vw, 3.3em)', // h1
+        '7xl': 'clamp(1.7em, 5vw, 3em)', // h1
       },
       colors: {
         primary: "var(--primaryColor)",
