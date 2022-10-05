@@ -102,4 +102,6 @@ const ClientDetailsPage = ({ client }) => {
   );
 };
 
+// just a comment
+
 export default ClientDetailsPage;
