@@ -102,4 +102,6 @@ const ClientDetailsPage = ({ client }) => {
   );
 };
 
+// testing settings
+
 export default ClientDetailsPage;
