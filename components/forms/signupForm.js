@@ -2,28 +2,8 @@ import React, { useEffect } from "react";
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
-import Spinner from "./spinner";
-
-const MyTextInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props);
-  return (
-    <div className="my-4">
-      <label className="text-sm font-semibold" htmlFor={props.id || props.name}>
-        {label}
-      </label>
-      <div>
-        <input
-          className="text-input border-2 w-full max-w-lg p-2"
-          {...field}
-          {...props}
-        />
-        {meta.touched && meta.error ? (
-          <div className="error text-xs p-1 text-red-500">*{meta.error}</div>
-        ) : null}
-      </div>
-    </div>
-  );
-};
+import Spinner from "../spinner";
+import MyTextInput from './inputFields';
 
 const SignupForm = () => {
   const [spinner, setSpinner] = useState(false);

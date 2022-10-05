@@ -7,7 +7,7 @@ const PortfolioPage = ({ category, categoryImages }) => {
 
     return (
         <>
-            <div className="px-4 mt-24 lg:mt-12 lg:px-20">
+            <div className="px-4 mt-24 lg:mt-4 lg:px-20">
                 <div className="md:flex md:justify-between md:items-center">
                     <div className="order-2">
                         <PortfolioTitles category={category} />
@@ -17,7 +17,7 @@ const PortfolioPage = ({ category, categoryImages }) => {
                         <PortfolioImageSlider portfolioImages={categoryImages} />
                     </div>
                 </div>
-                <div className="text-center mt-10">
+                <div className="mt-10 max-w-3xl lg:pl-20">
                     <p>I have been working with various conscious brands and creatives from fashion to products and branding helping them to tell their story through my lens.</p>
                     <p>Have a look at some of my recent projects.</p>
                 </div>
