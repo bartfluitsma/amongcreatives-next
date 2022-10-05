@@ -4,6 +4,7 @@ import Document, {
     Main,
     NextScript,
 } from 'next/document'
+import Script from 'next/script'
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -17,10 +18,13 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Forum&display=swap" rel="stylesheet" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> 
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Forum&display=swap"
+                        rel="stylesheet"
+                    />
                 </Head>
-                <body>
+                <body className='overflow-x-hidden'>
                     <Main />
                     <NextScript />
                 </body>
