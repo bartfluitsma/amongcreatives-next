@@ -6,6 +6,7 @@ import Spinner from "../spinner";
 import MyTextInput from "./inputFields";
 import emailjs from "@emailjs/browser";
 import TextAreaFormik from "./textarea";
+import { ScrollToFieldError } from './scrollToField';
 
 const ContactForm = () => {
   const form = useRef();
@@ -31,8 +32,8 @@ const ContactForm = () => {
             .required("Please write your message")
             .min(20, "Message must be at least 20 characters")
             .max(
-              1000,
-              "Maximum amount of characters reached, please keep it below 1000 characters."
+              1200,
+              "Maximum amount of characters reached, please keep it below 1200 characters."
             ),
         })}
         onSubmit={(values, { setSubmitting, setStatus }) => {
@@ -79,6 +80,7 @@ const ContactForm = () => {
               </p>
             ) : (
               <>
+                <ScrollToFieldError />
                 <MyTextInput
                   label="Name"
                   name="from_name"
@@ -95,6 +97,7 @@ const ContactForm = () => {
                   name="message"
                   label="Message"
                   placeholder={`Hi Nass, \nCould you tell me more about...`}
+                  rows="4"
                 />
                 <div>
                   <button

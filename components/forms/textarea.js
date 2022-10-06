@@ -4,7 +4,7 @@ const TextAreaFormik = (props) => {
   const { label, name, ...rest } = props;
 
   return (
-    <div className="">
+    <div className="my-5">
       <label htmlFor={name} className="text-sm font-semibold">
         {label}
       </label>
@@ -14,11 +14,12 @@ const TextAreaFormik = (props) => {
         id={name}
         name={name}
         {...rest}
-        rows="4"
       />
-      <span className="error text-xs p-1 text-red-500">
-        <ErrorMessage name={name} />
-      </span>
+      <ErrorMessage
+        name={name}
+        component="div"
+        className="error text-xs p-1 text-red-500"
+      />
     </div>
   );
 };

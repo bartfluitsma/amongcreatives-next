@@ -1,9 +1,10 @@
 import Divider from "../components/divider";
+import BookingForm from '../components/forms/bookingForm';
 
 const BookingPage = () => {
   return (
     <>
-      <div className="grid place-items-center max-w-2xl m-auto text-center mt-32 md:mt-10 mb-10">
+      <div className="grid place-items-center max-w-2xl m-auto text-center mt-32 md:mt-10 mb-10 px-4">
         <h1>Inquiry</h1>
         <p>
           Get in touch so we can start bringing your brand vision to life and
@@ -23,6 +24,7 @@ const BookingPage = () => {
         <p>I'm already excited to start working together!</p>
       </div>
       <Divider />
+      <BookingForm />
     </>
   );
 };
