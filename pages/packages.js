@@ -3,7 +3,7 @@ import SecondaryButton from "../components/secondaryButton";
 import Divider from "../components/divider";
 import BaseInfoPackages from "../components/packages/baseInfoPackages";
 import PackagesDetails from "../components/packages/packagesDetails";
-import SignupForm from "../components/signupForm";
+import SignupForm from "../components/forms/signupForm";
 
 const PackagesPage = () => {
   return (

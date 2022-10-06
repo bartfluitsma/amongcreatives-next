@@ -14,14 +14,14 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 3500,
         dots: false,
     }
 
     return (
         <>
             <div className="w-full overflow-hidden">
-                <div className="ml-4 my-4 w-full md:max-w-[65vw] lg:max-w-[55vw] xl:max-w-[65vw] ">
+                <div className="ml-4 my-4 w-full md:max-w-[65vw] lg:max-w-[55vw] xl:max-w-[55vw] ">
                     <Slider {...settings}>
                         {portfolioImages && portfolioImages.data.map((image, idx) =>
                             !isBreakpoint ? (
