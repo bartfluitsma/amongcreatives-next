@@ -14,13 +14,11 @@ const Home: NextPage = () => {
                 <title>Among creatives | Fashion &amp; Product photography</title>
                 <link rel="icon" href="/icons/logo-among-creatives-small.svg" />
             </Head>
-
             <HeroSectionHomepage />
             <AboutSectionHome />
             <Banner>
                 By capturing bespoke and creative shots, I will tell the story of your product and get your audience to stop scrolling!
             </Banner>
-
             <ImagesGridLayout />
             <PackagesCarousel />
 

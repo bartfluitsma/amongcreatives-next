@@ -69,7 +69,7 @@ const PackagesCarousel = () => {
                     <p className='text-center md:max-w-lg mb-10 m-auto px-4'>From mini-shoot, content refresh, product launch or if you're just starting out, the packages below are designed to reply to your needs</p>
                     <div className='max-w-4xl m-auto'>
                         <Slider {...settings}>
-                            {dataPackages.map((packageName, idx) => <PackageCarouselCard key={idx} name={packageName.name} description={packageName.description} image={packageName.image} imagesAmount={packageName.amountImages} anchor={packageName.anchor} />)}
+                            {dataPackages.map((packageName, idx) => <PackageCarouselCard key={idx} name={packageName.name} description={packageName.description} imageUrl={packageName.url} altText={packageName.altText} imagesAmount={packageName.amountImages} anchor={packageName.anchor} />)}
                         </Slider>
                     </div>
                     <div className="pt-10 pb-4 grid place-items-center">

@@ -32,6 +32,10 @@ const PackagesPage = () => {
       <Divider />
       <BaseInfoPackages />
       <PackagesDetails />
+      <div className="my-10">
+        <Divider />
+      </div>
+
       <div className="text-center px-4 my-10 max-w-2xl m-auto grid place-items-center">
         <p className="text-3xl">Cannot find any packages that suit you?</p>
         <p>
@@ -40,7 +44,7 @@ const PackagesPage = () => {
         </p>
         <SecondaryButton link="/contact">Contact me</SecondaryButton>
       </div>
-      <div className="my-20">
+      <div className="my-10">
         <Divider />
       </div>
       <div className="px-4" id="welcomeguide">

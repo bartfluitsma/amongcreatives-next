@@ -16,7 +16,7 @@ const PackagesDetails = () => {
                 >
                   <div>
                     <img
-                      className="rounded-t-[300px] rounded-b-[50px] sm:max-h-80 md:max-h-full object-cover w-full h-auto md:w-[15vw] md:min-w-[250px] sm:pr-3"
+                      className="rounded-t-[300px] rounded-b-[50px] sm:max-h-80 md:max-h-[300px] object-cover w-full h-auto md:w-[15vw] md:min-w-[250px] sm:pr-3"
                       src={packageDetail.url}
                       alt={packageDetail.altText}
                     />
@@ -40,7 +40,7 @@ const PackagesDetails = () => {
                   </div>
                   <div className="order-1 sm:order-2">
                     <img
-                      className="rounded-t-[300px] rounded-b-[50px] sm:max-h-80 md:max-h-full object-cover w-full h-auto md:w-[15vw] md:min-w-[250px] sm:pl-3"
+                      className="rounded-t-[300px] rounded-b-[50px] max-h-[400px] md:max-h-[300px]  object-cover w-full h-auto md:w-[15vw] md:min-w-[250px] sm:pl-3"
                       src={packageDetail.url}
                       alt={packageDetail.altText}
                     />

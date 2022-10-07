@@ -18,7 +18,7 @@ const PortfolioPage = ({ category, categoryImages }) => {
                     </div>
                 </div>
                 <div className="mt-10 max-w-3xl lg:pl-20">
-                    <p>I have been working with various conscious brands and creatives from fashion to products and branding helping them to tell their story through my lens.</p>
+                    <p>I have been working with various conscious brands and creatives from fashion to products helping them to tell their story through my lens.</p>
                     <p>Have a look at some of my recent projects.</p>
                 </div>
             </div>

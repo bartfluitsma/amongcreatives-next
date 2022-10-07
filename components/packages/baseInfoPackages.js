@@ -15,7 +15,6 @@ const BaseInfoPackages = () => {
             retouching/editing, mood board/shoot plan overview, retouching and
             editing
           </li>
-          <li>Free product delivery to my studio (up to € 30,-)</li>
           <li>
             Digital delivery via a link emailed to you at the conclusion of the
             shoot
