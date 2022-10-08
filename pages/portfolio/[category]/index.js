@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import CategoryCard from "../../../components/portfolio/categoryCard";
 import VerticalText from "../../../components/verticalTitle";
 import { fetcher } from "../../../lib/api";
@@ -36,6 +37,9 @@ const CategoryOverviewPage = ({ category }) => {
 
   return (
     <>
+      <Head>
+        <title>Among creatives | {category && category.data[0].attributes.Category}</title>
+      </Head>
       <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
         <div>
           <VerticalText>

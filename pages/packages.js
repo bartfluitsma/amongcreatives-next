@@ -4,10 +4,14 @@ import Divider from "../components/divider";
 import BaseInfoPackages from "../components/packages/baseInfoPackages";
 import PackagesDetails from "../components/packages/packagesDetails";
 import SignupForm from "../components/forms/signupForm";
+import Head from 'next/head';
 
 const PackagesPage = () => {
   return (
     <>
+      <Head>
+        <title>Among creatives | packages</title>
+      </Head>
       <div className="px-4 mt-32 lg:mt-20 lg:px-20 mb-10 lg:mb-16 max-w-4xl md:m-auto">
         <h1 className="text-center mb-5">Packages</h1>
         <div className="text-center">

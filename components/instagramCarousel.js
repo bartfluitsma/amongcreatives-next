@@ -82,14 +82,12 @@ const InstagramCarousel = (props) => {
             <Slider {...settings}>
               {images.data[0].attributes.images.data.map((image, idx) => {
                 return (
-                  <>
-                    <img
-                      key={idx}
-                      className="h-full max-h-[25rem]"
-                      src={`${baseUrl}${image.attributes.url}`}
-                      alt={image.attributes.alternativeText}
-                    />
-                  </>
+                  <img
+                    key={idx}
+                    className="h-full max-h-[25rem]"
+                    src={`${baseUrl}${image.attributes.url}`}
+                    alt={image.attributes.alternativeText}
+                  />
                 );
               })}
             </Slider>

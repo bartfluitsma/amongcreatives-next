@@ -1,6 +1,5 @@
 import type { NextPage }
     from 'next'
-import Head from 'next/head'
 import HeroSectionHomepage from "../components/heroSectionHome"
 import AboutSectionHome from "../components/aboutSectionHome"
 import Banner from "../components/banner"
@@ -10,10 +9,7 @@ import PackagesCarousel from "../components/packages/packagesCarousel"
 const Home: NextPage = () => {
     return (
         <div>
-            <Head>
-                <title>Among creatives | Fashion &amp; Product photography</title>
-                <link rel="icon" href="/icons/logo-among-creatives-small.svg" />
-            </Head>
+
             <HeroSectionHomepage />
             <AboutSectionHome />
             <Banner>

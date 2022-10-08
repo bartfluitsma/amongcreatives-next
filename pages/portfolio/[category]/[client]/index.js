@@ -1,6 +1,7 @@
 import { fetcher } from "../../../../lib/api";
 import VerticalText from "../../../../components/verticalText";
 import useMediaQuery from "../../../../helpers/breakpoints";
+import Head from 'next/head';
 
 export const getStaticPaths = async () => {
   const categoryPathResponse = await fetcher(
@@ -50,8 +51,13 @@ const ClientDetailsPage = ({ client }) => {
 
   const isBreakpoint = useMediaQuery(600)
 
+  console.log(client)
+
   return (
     <>
+      <Head>
+        <title>Among creatives | {client && data.name}</title>
+      </Head>
       <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
         <VerticalText>{client && data.name}</VerticalText>
         {isBreakpoint ? (
