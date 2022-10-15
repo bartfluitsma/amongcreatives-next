@@ -19,7 +19,8 @@ const CategoryCard = ({ data }) => {
                 {console.log('client slug', client.slug)}
                 <img
                   // key={i}
-                  src={`${baseUrl}${client.thumbnail.data.attributes.url}`}
+                  // src={`${baseUrl}${client.thumbnail.data.attributes.url}`}
+                  src={`${client.thumbnail.data.attributes.url}`}
                   alt={client.thumbnail.data.attributes.alternativeText}
                 />
                 <p className="text-xl mb-0 pb-0">{client.name}</p>

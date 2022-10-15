@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 const InstagramCarousel = (props) => {
   const [images, setImages] = useState(null);
-  const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL_BASE;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,7 +84,7 @@ const InstagramCarousel = (props) => {
                   <img
                     key={idx}
                     className="h-full max-h-[25rem]"
-                    src={`${baseUrl}${image.attributes.url}`}
+                    src={`${image.attributes.url}`}
                     alt={image.attributes.alternativeText}
                   />
                 );

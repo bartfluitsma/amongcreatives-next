@@ -66,15 +66,18 @@ const ClientDetailsPage = ({ client }) => {
               (data.images.data.map((image, idx) => {
                 if (idx === 0 || idx === 7 || idx === 9 || idx === 12 || idx === 15) {
                   return (
-                    <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img className='row-span-2 col-span-2' key={idx} src={`${image.attributes.url}`} alt={image.attributes.alternativeText} />
                   )
                 } else if (idx >= 18) {
                   return (
-                    <img className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    // <img className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img className='row-span-2 col-span-3' key={idx} src={`${image.attributes.url}`} alt={image.attributes.alternativeText} />
                   )
                 } else {
                   return (
-                    <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img key={idx} src={`${image.attributes.url}`} alt={image.attributes.alternativeText} />
                   )
                 }
 
@@ -87,15 +90,18 @@ const ClientDetailsPage = ({ client }) => {
               (data.images.data.map((image, idx) => {
                 if (idx === 0 || idx === 7 || idx === 8 || idx === 13 || idx === 14) {
                   return (
-                    <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img className='row-span-2 col-span-2' key={idx} src={`${image.attributes.url}`} alt={image.attributes.alternativeText} />
                   )
                 } else if (idx >= 17) {
                   return (
-                    <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img className='row-span-2 col-span-2' key={idx} src={`${image.attributes.url}`} alt={image.attributes.alternativeText} />
                   )
                 } else {
                   return (
-                    <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img key={idx} src={`${image.attributes.url}`} alt={image.attributes.alternativeText} />
                   )
                 }
 
