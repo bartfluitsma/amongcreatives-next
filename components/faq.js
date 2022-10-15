@@ -1,4 +1,5 @@
 const FAQ = ({ faqs }) => {
+    console.log('faqs', faqs)
     return (
         <>
             <section id="faq" className="text-gray-700">
