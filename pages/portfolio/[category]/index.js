@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import CategoryCard from "../../../components/portfolio/categoryCard";
 import VerticalText from "../../../components/verticalTitle";
 import { fetcher } from "../../../lib/api";
@@ -25,7 +25,6 @@ export async function getStaticProps(context) {
   const category = context.params.category;
   const categoryPropsResponse = await fetcher(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/categories?filters[path][$eq]=${category}&?populate[0]=clients&populate[1]=clients.thumbnail`
-
   );
 
   return {
@@ -34,11 +33,12 @@ export async function getStaticProps(context) {
 }
 
 const CategoryOverviewPage = ({ category }) => {
-
   return (
     <>
       <Head>
-        <title>Among creatives | {category && category.data[0].attributes.Category}</title>
+        <title>
+          Among creatives | {category && category.data[0].attributes.Category}
+        </title>
       </Head>
       <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
         <div>
