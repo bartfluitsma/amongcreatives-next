@@ -1,9 +1,13 @@
+import Head from 'next/head';
 import Link from "next/link";
 import ContactForm from '../components/forms/contactForm';
 
 const ContactPage = () => {
   return (
     <>
+      <Head>
+        <title>Among creatives | contact</title>
+      </Head>
       <div className="grid place-items-center max-w-xl m-auto text-center mt-32 md:mt-10">
         <h1>Contact</h1>
         <p>

@@ -27,13 +27,15 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                             !isBreakpoint ? (
                                 image.attributes.DesktopImage.data.map((portfolioImage) => {
                                     return (
-                                        <img key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
+                                        // <img key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
+                                        <img key={idx} src={`${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
                                     )
                                 })
                             ) : (
                                 image.attributes.MobileImage.data.map((portfolioImage) => {
                                     return (
-                                        <img key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
+                                        // <img key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
+                                        <img key={idx} src={`${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
                                     )
                                 })
                             )

@@ -83,11 +83,11 @@ const Navbar = () => {
                 </nav></>
             ) : (
                 <>
-                    <nav className='bg-white py-4 grid place-items-center'>
+                    <nav className='bg-white py-4 grid px-[4vw]'>
                         {/* remove place items center when using logo on the side */}
 
                         <div className="flex items-center justify-between">
-                            {/* <div className="mx-6 mb-0 my-4 lg:my-auto hidden lg:block">
+                            <div className="mb-0 my-4 lg:my-auto hidden lg:block">
                                 <Link href='/'>
                                     <a>
                                         <Image
@@ -99,7 +99,7 @@ const Navbar = () => {
                                         />
                                     </a>
                                 </Link>
-                            </div> */}
+                            </div>
                             <ul className={' bg-white lg:bg-transparent w-full lg:w-auto lg:flex lg:justify-between lg:translate-x-0'}>
 
                                 <li className={LinkStyles}>
@@ -120,7 +120,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
 
-                                <ul className="mx-0 mb-0 my-4 lg:my-auto lg:mt-2 hidden lg:block">
+                                {/* <ul className="mx-0 mb-0 my-4 lg:my-auto lg:mt-2 hidden lg:block">
                                     <Link href='/'>
                                         <a>
                                             <Image
@@ -132,7 +132,7 @@ const Navbar = () => {
                                             />
                                         </a>
                                     </Link>
-                                </ul>
+                                </ul> */}
 
                                 <li className={LinkStyles}>
                                     <Link href='/packages'>

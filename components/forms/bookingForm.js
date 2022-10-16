@@ -26,7 +26,7 @@ const BookingFormNew = () => {
           products_type: "",
           shoot_style: "",
           shoot_purpose: [], // social media, website, magazine, etc...
-          shoot_highlight: "",
+          // shoot_highlight: "",
           amount_photos: "",
           amount_items: "", // How many products / outfits would you like to shoot?
           shoot_date: "", // Date of the shoot
@@ -45,7 +45,7 @@ const BookingFormNew = () => {
           products_type: Yup.string(),
           shoot_style: Yup.string(),
           // shoot_purpose: Yup.string(),
-          shoot_highlight: Yup.string(),
+          // shoot_highlight: Yup.string(),
           amount_photos: Yup.number()
             // .required("Required")
             .min(10, "Min. is 10 photos.")
@@ -127,7 +127,7 @@ const BookingFormNew = () => {
                   label="In three words, how would you describe your brand?"
                   name="brand_description"
                   type="text"
-                  // placeholder="conscious, simple, "
+                // placeholder="conscious, simple, "
                 />
                 <TextAreaFormik
                   name="products_type"
@@ -179,12 +179,12 @@ const BookingFormNew = () => {
                     />
                   </div>
                 </div>
-                <TextAreaFormik
+                {/* <TextAreaFormik
                   name="shoot_highlight"
                   label="What would you like to highlight in this shoot?"
                   placeholder="helping customers understand the product, highlight specific features or ingredients, etc."
                   rows="2"
-                />
+                /> */}
                 <NumberInput
                   name="amount_photos"
                   label="How many photos would you like to have?"

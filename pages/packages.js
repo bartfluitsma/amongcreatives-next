@@ -4,10 +4,14 @@ import Divider from "../components/divider";
 import BaseInfoPackages from "../components/packages/baseInfoPackages";
 import PackagesDetails from "../components/packages/packagesDetails";
 import SignupForm from "../components/forms/signupForm";
+import Head from 'next/head';
 
 const PackagesPage = () => {
   return (
     <>
+      <Head>
+        <title>Among creatives | packages</title>
+      </Head>
       <div className="px-4 mt-32 lg:mt-20 lg:px-20 mb-10 lg:mb-16 max-w-4xl md:m-auto">
         <h1 className="text-center mb-5">Packages</h1>
         <div className="text-center">
@@ -32,6 +36,10 @@ const PackagesPage = () => {
       <Divider />
       <BaseInfoPackages />
       <PackagesDetails />
+      <div className="my-10">
+        <Divider />
+      </div>
+
       <div className="text-center px-4 my-10 max-w-2xl m-auto grid place-items-center">
         <p className="text-3xl">Cannot find any packages that suit you?</p>
         <p>
@@ -40,7 +48,7 @@ const PackagesPage = () => {
         </p>
         <SecondaryButton link="/contact">Contact me</SecondaryButton>
       </div>
-      <div className="my-20">
+      <div className="my-10">
         <Divider />
       </div>
       <div className="px-4" id="welcomeguide">

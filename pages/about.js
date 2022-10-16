@@ -4,10 +4,14 @@ import PrimaryButton from "../components/primaryButton";
 import Banner from "../components/banner";
 import FAQ from "../components/faq";
 import { fetcher } from "../lib/api";
+import Head from 'next/head';
 
 const AboutPage = ({ faqs }) => {
   return (
     <>
+      <Head>
+        <title>Among creatives | about</title>
+      </Head>
       <AboutSectionAbout />
       <Divider />
       <div className="grid place-items-center mb-20">
