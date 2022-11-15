@@ -35,6 +35,7 @@ const AboutSectionHome = () => {
             layout="responsive"
             objectFit="cover"
             width="100%"
+            loading="eager"
             height="120vh"
           />
         </div>

@@ -38,6 +38,7 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                           layout="responsive"
                           objectFit="cover"
                           width="100%"
+                          loading="eager"
                           height="58vh"
                         />
                       );
@@ -52,6 +53,7 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                           layout="responsive"
                           objectFit="cover"
                           width="100%"
+                          loading="eager"
                           height="120vh"
                         />
                       );

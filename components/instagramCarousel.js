@@ -91,6 +91,7 @@ const InstagramCarousel = (props) => {
                     height={"120px"}
                     layout="responsive"
                     objectFit="cover"
+                    loading="eager"
                   />
                 );
               })}

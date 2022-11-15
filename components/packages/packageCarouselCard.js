@@ -23,6 +23,7 @@ const PackageCarouselCard = ({
               objectFit="cover"
               width="100%"
               height="120px"
+              loading="eager"
               alt={altText}
             />
           </div>

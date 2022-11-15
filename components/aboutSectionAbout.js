@@ -43,6 +43,7 @@ const AboutSectionAbout = () => {
             objectFit="cover"
             width="100%"
             height="125vh"
+            loading="eager"
           />
         </div>
       </div>

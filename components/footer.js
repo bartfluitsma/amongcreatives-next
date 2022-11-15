@@ -47,6 +47,7 @@ const Footer = ({ instagramImagesResponse }) => {
                   alt="instagram icon"
                   width={"40"}
                   height={"40"}
+                  loading="eager"
                 />
               </a>
               <a
@@ -61,6 +62,7 @@ const Footer = ({ instagramImagesResponse }) => {
                     alt="Pinterest icon"
                     width={"40"}
                     height={"40"}
+                    loading="eager"
                   />
                 </div>
               </a>
@@ -75,6 +77,7 @@ const Footer = ({ instagramImagesResponse }) => {
                   height={"100%"}
                   // layout="responsive"
                   objectFit="contain"
+                  loading="eager"
                 />
               </Link>
             </div>

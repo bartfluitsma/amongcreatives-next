@@ -28,6 +28,7 @@ const CategoryCard = ({ data }) => {
                   objectFit="cover"
                   width="100%"
                   height="120px"
+                  loading="eager"
                 />
                 <p className="text-xl mb-0 pb-0">{client.name}</p>
                 <p className="mt-[-5px] pt-0 text-sm">{client.description}</p>
