@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { packageDetails } from "../../data/index";
 
 const PackagesDetails = () => {
@@ -17,10 +16,12 @@ const PackagesDetails = () => {
                 className="grid sm:flex items-center  my-5"
               >
                 <div>
-                  <Image
+                  <img
                     className="rounded-t-[300px] rounded-b-[50px] sm:max-h-80 md:max-h-[300px] object-cover w-full h-auto md:w-[15vw] md:min-w-[250px] sm:pr-3"
                     src={packageDetail.url}
                     alt={packageDetail.altText}
+                    width={"100%"}
+                    height={"100%"}
                   />
                 </div>
                 <div className="md:ml-10">
@@ -41,10 +42,12 @@ const PackagesDetails = () => {
                   <p className="font-semibold">{packageDetail.amount}</p>
                 </div>
                 <div className="order-1 sm:order-2">
-                  <Image
+                  <img
                     className="rounded-t-[300px] rounded-b-[50px] max-h-[400px] md:max-h-[300px]  object-cover w-full h-auto md:w-[15vw] md:min-w-[250px] sm:pl-3"
                     src={packageDetail.url}
                     alt={packageDetail.altText}
+                    width={"100%"}
+                    height={"100%"}
                   />
                 </div>
               </div>

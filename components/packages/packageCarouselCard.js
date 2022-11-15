@@ -13,18 +13,24 @@ const PackageCarouselCard = ({
       <Link href={`/packages${anchor}`}>
         <div id={anchor} className="w-[250px] m-auto">
           <div className="cursor-pointer text-center">
-            <div
-              className={`h-[300px] bg-accent  rounded-lg rounded-t-[50%] overflow-hidden`}
-            >
-              <Image
-                className="rounded-lg rounded-t-[30%] max-h-auto w-full"
-                src={imageUrl}
-                alt={altText}
-              />
-            </div>
-            <h4 className="mb-0">{name}</h4>
-            <p className="px-1 leading-5">{description}</p>
+            {/* <div
+              className={`h-[300px] w-[100%] bg-accent  rounded-lg rounded-t-[50%] overflow-hidden`}
+            > */}
+            <Image
+              className="rounded-2xl rounded-t-[300px] max-h-auto w-full"
+              src={imageUrl}
+              layout="responsive"
+              objectFit="cover"
+              width="100%"
+              height="120px"
+              alt={altText}
+            />
           </div>
+          <div className="text-center">
+            <h4 className="mb-0">{name}</h4>
+            <p className="px-1 leading-5 text-sm">{description}</p>
+          </div>
+          {/* </div> */}
         </div>
       </Link>
     </>

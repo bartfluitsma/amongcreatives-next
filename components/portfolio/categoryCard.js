@@ -24,6 +24,10 @@ const CategoryCard = ({ data }) => {
                   priority={true}
                   src={`${client.thumbnail.data.attributes.url}`}
                   alt={client.thumbnail.data.attributes.alternativeText}
+                  layout="responsive"
+                  objectFit="cover"
+                  width="100%"
+                  height="120px"
                 />
                 <p className="text-xl mb-0 pb-0">{client.name}</p>
                 <p className="mt-[-5px] pt-0 text-sm">{client.description}</p>

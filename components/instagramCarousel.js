@@ -87,6 +87,10 @@ const InstagramCarousel = (props) => {
                     className="h-full max-h-[25rem]"
                     src={`${image.attributes.url}`}
                     alt={image.attributes.alternativeText}
+                    width={"100%"}
+                    height={"120px"}
+                    layout="responsive"
+                    objectFit="cover"
                   />
                 );
               })}

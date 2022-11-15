@@ -35,6 +35,10 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                           priority={true}
                           src={`${portfolioImage.attributes.url}`}
                           alt={portfolioImage.attributes.alternativeText}
+                          layout="responsive"
+                          objectFit="cover"
+                          width="100%"
+                          height="58vh"
                         />
                       );
                     })
@@ -45,6 +49,10 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                           key={idx}
                           src={`${portfolioImage.attributes.url}`}
                           alt={portfolioImage.attributes.alternativeText}
+                          layout="responsive"
+                          objectFit="cover"
+                          width="100%"
+                          height="120vh"
                         />
                       );
                     })

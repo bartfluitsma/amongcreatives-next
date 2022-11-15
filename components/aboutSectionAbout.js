@@ -38,7 +38,11 @@ const AboutSectionAbout = () => {
           <Image
             className="mb-8 rounded-xl rounded-tr-[30%]"
             src="/Smiling product photographer Nass sitting outside.jpg"
-            alt=""
+            alt="Smiling product photographer Nass sitting outside"
+            layout="responsive"
+            objectFit="cover"
+            width="100%"
+            height="125vh"
           />
         </div>
       </div>

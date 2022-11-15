@@ -17,11 +17,13 @@ const PortfolioGridRandom = ({ data }) => {
       >
         {data.images.data.map((image, idx) => {
           return (
-            <Image
+            <img
               className="p-[4px]"
               priority={true}
               key={idx}
               src={`${image.attributes.url}`}
+              width={"100%"}
+              height={"100%"}
               alt={image.attributes.alternativeText}
             />
           );

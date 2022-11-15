@@ -45,6 +45,8 @@ const Footer = ({ instagramImagesResponse }) => {
                   className="max-w-[30px] lg:max-w-[35px] m-2 lg:mr-5"
                   src="/icons/instagram-icon.svg"
                   alt="instagram icon"
+                  width={"40"}
+                  height={"40"}
                 />
               </a>
               <a
@@ -52,11 +54,15 @@ const Footer = ({ instagramImagesResponse }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  className="max-w-[30px] lg:max-w-[35px] m-2"
-                  src="/icons/pinterest-icon.svg"
-                  alt="Pinterest icon"
-                />
+                <div className="ml-3">
+                  <Image
+                    className="max-w-[30px] lg:max-w-[35px] m-2"
+                    src="/icons/pinterest-icon.svg"
+                    alt="Pinterest icon"
+                    width={"40"}
+                    height={"40"}
+                  />
+                </div>
               </a>
             </div>
             <div className="mt-6 md:mt-0 cursor-pointer">
@@ -65,6 +71,10 @@ const Footer = ({ instagramImagesResponse }) => {
                   className="max-h-[60px] lg:max-h-[70px]"
                   src="/logo-new-among-creatives.svg"
                   alt="Logo among creatives photography"
+                  width={"200px"}
+                  height={"100%"}
+                  // layout="responsive"
+                  objectFit="contain"
                 />
               </Link>
             </div>

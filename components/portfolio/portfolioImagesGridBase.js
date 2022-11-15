@@ -18,34 +18,40 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   idx === 15
                 ) {
                   return (
-                    // <Image className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <Image
+                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img
                       priority={true}
                       className="row-span-2 col-span-2"
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
+                      width={"100%"}
+                      height={"100%"}
                     />
                   );
                 } else if (idx >= 18) {
                   return (
-                    // <Image className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <Image
+                    // <img className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img
                       className="row-span-2 col-span-3"
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
+                      width={"100%"}
+                      height={"100%"}
                     />
                   );
                 } else {
                   return (
-                    // <Image key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <Image
+                    // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
+                      width={"100%"}
+                      height={"100%"}
                     />
                   );
                 }
@@ -68,34 +74,40 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   idx === 18
                 ) {
                   return (
-                    // <Image className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <Image
+                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img
                       className="row-span-2 col-span-2"
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
+                      width={"100%"}
+                      height={"100%"}
                     />
                   );
                 } else if (idx >= 21) {
                   return (
-                    // <Image className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <Image
+                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img
                       className="row-span-2 col-span-2"
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
+                      width={"100%"}
+                      height={"100%"}
                     />
                   );
                 } else {
                   return (
-                    // <Image key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <Image
+                    // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <img
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
+                      width={"100%"}
+                      height={"100%"}
                     />
                   );
                 }
