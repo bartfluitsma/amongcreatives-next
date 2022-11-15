@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const CategoryCard = ({ data }) => {
@@ -17,7 +18,7 @@ const CategoryCard = ({ data }) => {
             >
               <div>
                 {/* {console.log('client slug', client.slug)} */}
-                <img
+                <Image
                   // key={i}
                   // src={`${baseUrl}${client.thumbnail.data.attributes.url}`}
                   priority={true}

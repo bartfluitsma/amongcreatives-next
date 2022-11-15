@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Divider from "./divider";
 import SecondaryButton from "./secondaryButton";
 
@@ -9,8 +10,8 @@ const AboutSectionAbout = () => {
           <div className="mb-8 md:mb-10">
             <p>Hi, I'm Nass!</p>
             <p>
-              I’m a Fashion, lifestyle and product photographer for sustainable and conscious
-              businesses worldwide.
+              I’m a Fashion, lifestyle and product photographer for sustainable
+              and conscious businesses worldwide.
             </p>
             <p>
               I help wonderful brands to grow their online presence and visual
@@ -19,7 +20,9 @@ const AboutSectionAbout = () => {
             <div className="flex my-7 lg:my-5 pl-2">
               <div className="w-[10px] bg-secondary min-h-full my-4 mr-4"></div>
               <p className="text-lg lg:text-3xl pr-4 lg:pr-0 font-Cormorant">
-                "I love being involved in every step of the creative process capturing the personality of your brand and get you connected with your audience!"
+                "I love being involved in every step of the creative process
+                capturing the personality of your brand and get you connected
+                with your audience!"
               </p>
             </div>
             <p>
@@ -32,7 +35,7 @@ const AboutSectionAbout = () => {
           <SecondaryButton link="/contact">Contact me</SecondaryButton>
         </div>
         <div className="mt-10 md:w-5/12 md:p-8">
-          <img
+          <Image
             className="mb-8 rounded-xl rounded-tr-[30%]"
             src="/Smiling product photographer Nass sitting outside.jpg"
             alt=""

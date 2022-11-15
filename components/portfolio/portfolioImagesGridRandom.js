@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Masonry from "react-masonry-css";
 
 const PortfolioGridRandom = ({ data }) => {
@@ -16,7 +17,7 @@ const PortfolioGridRandom = ({ data }) => {
       >
         {data.images.data.map((image, idx) => {
           return (
-            <img
+            <Image
               className="p-[4px]"
               priority={true}
               key={idx}

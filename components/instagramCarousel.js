@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const InstagramCarousel = (props) => {
   const [images, setImages] = useState(null);
@@ -81,7 +82,7 @@ const InstagramCarousel = (props) => {
             <Slider {...settings}>
               {images.data[0].attributes.images.data.map((image, idx) => {
                 return (
-                  <img
+                  <Image
                     key={idx}
                     className="h-full max-h-[25rem]"
                     src={`${image.attributes.url}`}

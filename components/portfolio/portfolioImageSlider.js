@@ -2,6 +2,7 @@ import useMediaQuery from "../../helpers/breakpoints";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const PortfolioImageSlider = ({ portfolioImages }) => {
   const isBreakpoint = useMediaQuery(768);
@@ -28,8 +29,8 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                 !isBreakpoint
                   ? image.attributes.DesktopImage.data.map((portfolioImage) => {
                       return (
-                        // <img key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
-                        <img
+                        // <Image key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
+                        <Image
                           key={idx}
                           priority={true}
                           src={`${portfolioImage.attributes.url}`}
@@ -39,8 +40,8 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                     })
                   : image.attributes.MobileImage.data.map((portfolioImage) => {
                       return (
-                        // <img key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
-                        <img
+                        // <Image key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
+                        <Image
                           key={idx}
                           src={`${portfolioImage.attributes.url}`}
                           alt={portfolioImage.attributes.alternativeText}

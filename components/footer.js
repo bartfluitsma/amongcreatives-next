@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import InstagramCarousel from "./instagramCarousel";
 
@@ -40,7 +41,7 @@ const Footer = ({ instagramImagesResponse }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   className="max-w-[30px] lg:max-w-[35px] m-2 lg:mr-5"
                   src="/icons/instagram-icon.svg"
                   alt="instagram icon"
@@ -51,7 +52,7 @@ const Footer = ({ instagramImagesResponse }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   className="max-w-[30px] lg:max-w-[35px] m-2"
                   src="/icons/pinterest-icon.svg"
                   alt="Pinterest icon"
@@ -60,7 +61,7 @@ const Footer = ({ instagramImagesResponse }) => {
             </div>
             <div className="mt-6 md:mt-0 cursor-pointer">
               <Link href="/">
-                <img
+                <Image
                   className="max-h-[60px] lg:max-h-[70px]"
                   src="/logo-new-among-creatives.svg"
                   alt="Logo among creatives photography"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useMediaQuery from "../../helpers/breakpoints";
 
 const PortfolioGridBasicLayout = ({ data }) => {
@@ -17,8 +18,8 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   idx === 15
                 ) {
                   return (
-                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <img
+                    // <Image className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <Image
                       priority={true}
                       className="row-span-2 col-span-2"
                       key={idx}
@@ -28,8 +29,8 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   );
                 } else if (idx >= 18) {
                   return (
-                    // <img className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <img
+                    // <Image className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <Image
                       className="row-span-2 col-span-3"
                       priority={true}
                       key={idx}
@@ -39,8 +40,8 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   );
                 } else {
                   return (
-                    // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <img
+                    // <Image key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <Image
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}
@@ -67,8 +68,8 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   idx === 18
                 ) {
                   return (
-                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <img
+                    // <Image className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <Image
                       className="row-span-2 col-span-2"
                       priority={true}
                       key={idx}
@@ -78,8 +79,8 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   );
                 } else if (idx >= 21) {
                   return (
-                    // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <img
+                    // <Image className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <Image
                       className="row-span-2 col-span-2"
                       priority={true}
                       key={idx}
@@ -89,8 +90,8 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   );
                 } else {
                   return (
-                    // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
-                    <img
+                    // <Image key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
+                    <Image
                       priority={true}
                       key={idx}
                       src={`${image.attributes.url}`}

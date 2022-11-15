@@ -1,6 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const PackageCarouselCard = ({ name, description, imageUrl, altText, anchor }) => {
+const PackageCarouselCard = ({
+  name,
+  description,
+  imageUrl,
+  altText,
+  anchor,
+}) => {
   return (
     <>
       <Link href={`/packages${anchor}`}>
@@ -9,7 +16,7 @@ const PackageCarouselCard = ({ name, description, imageUrl, altText, anchor }) =
             <div
               className={`h-[300px] bg-accent  rounded-lg rounded-t-[50%] overflow-hidden`}
             >
-              <img
+              <Image
                 className="rounded-lg rounded-t-[30%] max-h-auto w-full"
                 src={imageUrl}
                 alt={altText}
