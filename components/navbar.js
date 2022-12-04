@@ -147,8 +147,8 @@ const Navbar = () => {
                       src="/logo-new-among-creatives.svg"
                       alt="Among Creatives logo"
                       // placeholder="blurred"
-                      width={200}
-                      height={70}
+                      width={120}
+                      height={30}
                     />
                   </a>
                 </Link>
