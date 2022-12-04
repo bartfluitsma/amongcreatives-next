@@ -149,6 +149,7 @@ const Navbar = () => {
                       // placeholder="blurred"
                       width={120}
                       height={30}
+                      className="py-3"
                     />
                   </a>
                 </Link>
