@@ -15,18 +15,18 @@ const footerItems = [
     link: "/portfolio",
     name: "Portfolio",
   },
-  {
-    link: "/packages",
-    name: "Packages",
-  },
+  // {
+  //   link: "/packages",
+  //   name: "Packages",
+  // },
   {
     link: "/contact",
     name: "Contact",
   },
-  {
-    link: "/packages#welcomeguide",
-    name: "Welcome guide",
-  },
+  // {
+  //   link: "/packages#welcomeguide",
+  //   name: "Welcome guide",
+  // },
   {
     link: "/about#faq",
     name: "FAQ",
@@ -98,7 +98,14 @@ const Footer = ({ instagramImagesResponse }) => {
           </div>
         </div>
         <p className="text-center text-sm md:mt-7 opacity-70">
-          Among Creatives © {new Date().getFullYear()}
+          Among Creatives © {new Date().getFullYear()} | Development by{" "}
+          <a
+            href="http://bartfluitsma.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            bartfluitsma {/* nomadscode */}
+          </a>
         </p>
       </div>
     </>

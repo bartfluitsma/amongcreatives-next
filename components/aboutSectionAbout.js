@@ -11,7 +11,7 @@ const AboutSectionAbout = () => {
             <p>Hi, I'm Nass!</p>
             <p>
               I’m a Fashion, lifestyle and product photographer for sustainable
-              and conscious businesses worldwide.
+              and conscious businesses between Bali and Europe.
             </p>
             <p>
               I help wonderful brands to grow their online presence and visual
@@ -20,25 +20,26 @@ const AboutSectionAbout = () => {
             <div className="flex my-7 lg:my-5 pl-2">
               <div className="w-[10px] bg-secondary min-h-full my-4 mr-4"></div>
               <p className="text-lg lg:text-3xl pr-4 lg:pr-0 font-Cormorant">
-                "I love being involved in every step of the creative process
-                capturing the personality of your brand and get you connected
-                with your audience!"
+                “My purpose is to help slow fashion, ethical, and conscious
+                business to thrive with compelling visuals and expand their
+                message to as many customers as possible!”
               </p>
             </div>
             <p>
-              We will review together your vision to create awesome, fresh &amp;
-              natural content that reflects your brands and help you thrive!
+              I believe that doing business should not be at the cost of our
+              planet, people, and animals. That is why I work on projects with
+              equal value, love and shared vision.
             </p>
-            <p>Looking for engaging visuals?</p>
-            <p>Fair-tastic, let's have a chat!</p>
+            <p>Let's work together and get your message out there!</p>
           </div>
           <SecondaryButton link="/contact">Contact me</SecondaryButton>
         </div>
         <div className="mt-10 md:w-5/12 md:p-8 -z-10">
           <Image
-            className="mb-8 rounded-xl rounded-tr-[30%]"
-            src="/Smiling product photographer Nass sitting outside.jpg"
-            alt="Smiling product photographer Nass sitting outside"
+            // className="mb-8 rounded-xl rounded-tr-[30%]"
+            className=""
+            src="/photographer-for-sustainable-businesses-nass-behind-the-camera.jpg"
+            alt="Photographer for sustainable businesses Nass behind the camera."
             layout="responsive"
             objectFit="cover"
             width="100%"

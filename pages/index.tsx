@@ -2,12 +2,27 @@ import type { NextPage }
     from 'next'
 import HeroSectionHomepage from "../components/heroSectionHome"
 import AboutSectionHome from "../components/aboutSectionHome"
+import LatestWorkSectionHome from "../components/latestWorkSectionHome"
 import Banner from "../components/banner"
 import ImagesGridLayout from "../components/imagesGridLayout"
 import PackagesCarousel from "../components/packages/packagesCarousel"
 import Divider from '../components/divider'
+import { fetcher } from '../lib/api'
 
-const Home: NextPage = () => {
+
+
+export async function getStaticProps() {
+    const categoryPropsResponse = await fetcher(
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/categories?populate=clients&populate=clients.thumbnail`
+    );
+  
+    return {
+      props: { category: categoryPropsResponse },
+    };
+  }
+  
+
+const Home: NextPage = (category) => {
     return (
         <div>
 
@@ -19,6 +34,8 @@ const Home: NextPage = () => {
             <Divider />
             {/* <ImagesGridLayout /> */}
             {/* <PackagesCarousel /> */}
+
+            <LatestWorkSectionHome category={category} />
 
         </div>
     )

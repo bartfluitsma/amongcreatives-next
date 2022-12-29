@@ -20,7 +20,7 @@ const AboutPage = ({ faqs }) => {
           product and get your audience to stop scrolling!
         </p>
         <p className="mb-5 lg:mb-10">Want to know more?</p>
-        <PrimaryButton link="/packages">See packages</PrimaryButton>
+        <PrimaryButton link="/contact">Contact me</PrimaryButton>
       </div>
       {/* <Banner>Frequently Asked Questions</Banner> */}
       <FAQ faqs={faqs} />

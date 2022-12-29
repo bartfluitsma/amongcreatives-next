@@ -154,19 +154,6 @@ const Navbar = () => {
                   Portfolio
                 </li>
               )}
-
-              <li onClick={changeStyle} className={LinkStyles}>
-                <Link href="/packages">
-                  <a
-                    className={
-                      router.pathname === "/packages" ? ActiveLink : null
-                    }
-                  >
-                    Packages
-                  </a>
-                </Link>
-              </li>
-
               <li onClick={changeStyle} className={LinkStyles}>
                 <Link href="/contact">
                   <a
@@ -178,22 +165,12 @@ const Navbar = () => {
                   </a>
                 </Link>
               </li>
-
-              {/* <li onClick={changeStyle} className={LinkStyles}>
-                <Link href="/book">
-                  <a className="bg-accent py-3 px-8 shadow-softShadow">
-                    Book now
-                  </a>
-                </Link>
-              </li> */}
             </ul>
           </nav>
         </>
       ) : (
         <>
           <nav className="bg-white py-4 grid px-[4vw]">
-            {/* remove place items center when using logo on the side */}
-
             <div className="flex items-center justify-between">
               <div className="mb-0 my-4 lg:my-auto hidden lg:block">
                 <Link href="/">
@@ -201,7 +178,6 @@ const Navbar = () => {
                     <img
                       src="/logo-new-among-creatives.svg"
                       alt="Among Creatives logo"
-                      // placeholder="blurred"
                       width={120}
                       height={30}
                       className="py-3"
@@ -218,18 +194,6 @@ const Navbar = () => {
                   <Link className={hoverStyles} href="/">
                     <a className={router.pathname === "/" ? ActiveLink : null}>
                       Home
-                    </a>
-                  </Link>
-                </li>
-
-                <li className={LinkStyles}>
-                  <Link href="/about">
-                    <a
-                      className={
-                        router.pathname === "/about" ? ActiveLink : null
-                      }
-                    >
-                      About
                     </a>
                   </Link>
                 </li>
@@ -261,28 +225,14 @@ const Navbar = () => {
                   ) : null}
                 </li>
 
-                {/* <ul className="mx-0 mb-0 my-4 lg:my-auto lg:mt-2 hidden lg:block">
-                                    <Link href='/'>
-                                        <a>
-                                            <Image
-                                                src='/logo-new-among-creatives.svg'
-                                                alt='Among Creatives logo'
-                                                // placeholder="blurred"
-                                                width={200}
-                                                height={70}
-                                            />
-                                        </a>
-                                    </Link>
-                                </ul> */}
-
                 <li className={LinkStyles}>
-                  <Link href="/packages">
+                  <Link href="/about">
                     <a
                       className={
-                        router.pathname === "/packages" ? ActiveLink : null
+                        router.pathname === "/about" ? ActiveLink : null
                       }
                     >
-                      Packages
+                      About
                     </a>
                   </Link>
                 </li>
@@ -298,14 +248,6 @@ const Navbar = () => {
                     </a>
                   </Link>
                 </li>
-                {/* 
-                <li className={LinkStyles}>
-                  <Link href="/book">
-                    <a className="bg-accent py-3 px-8 shadow-softShadow">
-                      Book now
-                    </a>
-                  </Link>
-                </li> */}
               </ul>
             </div>
           </nav>
