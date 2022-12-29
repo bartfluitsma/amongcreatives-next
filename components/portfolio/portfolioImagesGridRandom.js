@@ -19,7 +19,7 @@ const PortfolioGridRandom = ({ data }) => {
           return (
             <img
               className="p-[4px]"
-              priority={true}
+              priority
               key={idx}
               src={`${image.attributes.url}`}
               width={"100%"}

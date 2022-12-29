@@ -1,9 +1,11 @@
 import { fetcher } from "../../../../lib/api";
 import VerticalText from "../../../../components/verticalText";
 import useMediaQuery from "../../../../helpers/breakpoints";
-import Head from 'next/head';
-import PortfolioGridBasicLayout from '../../../../components/portfolio/portfolioImagesGridBase';
-import PortfolioGridRandom from '../../../../components/portfolio/portfolioImagesGridRandom';
+import Head from "next/head";
+import PortfolioGridBasicLayout from "../../../../components/portfolio/portfolioImagesGridBase";
+import PortfolioGridRandom from "../../../../components/portfolio/portfolioImagesGridRandom";
+import ClientPageSkeleton from "../../../../components/skeletons/clientPageSkeleton";
+import { useEffect, useState } from "react";
 
 export const getStaticPaths = async () => {
   const categoryPathResponse = await fetcher(
@@ -50,16 +52,35 @@ export async function getStaticProps(context) {
 
 const ClientDetailsPage = ({ client }) => {
   const data = client && client.data[0].attributes.clients[0];
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (data) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    }
+  }, []);
 
   return (
     <>
-      <Head>
-        <title>Among creatives | {client && data.name}</title>
-      </Head>
-      <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
-        <VerticalText>{client && data.name}</VerticalText>
-        {data.randomImages ? <PortfolioGridRandom data={data} /> : <PortfolioGridBasicLayout data={data} />}
-      </div>
+      {loading ? (
+        <ClientPageSkeleton />
+      ) : (
+        <>
+          <Head>
+            <title>Among creatives | {client && data.name}</title>
+          </Head>
+          <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
+            <VerticalText>{client && data.name}</VerticalText>
+            {data.randomImages ? (
+              <PortfolioGridRandom data={data} />
+            ) : (
+              <PortfolioGridBasicLayout data={data} />
+            )}
+          </div>
+        </>
+      )}
     </>
   );
 };

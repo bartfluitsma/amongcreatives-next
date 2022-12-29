@@ -8,7 +8,7 @@ import Script from 'next/script'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <FullPageSpinner />
+      {/* <FullPageSpinner /> */}
       <Head>
 
         <title>Among creatives | Fashion, lifestyle &amp; Product photography</title>

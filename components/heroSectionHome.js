@@ -9,7 +9,7 @@ const HeroSectionHome = () => {
           <p className="text-white text-Forum pb-2">
             For Sustainable &amp; Ethical Brands
           </p>
-          <PrimaryButton link="/book">Book a shoot</PrimaryButton>
+          <PrimaryButton link="/contact">Book a shoot</PrimaryButton>
         </div>
       </div>
     </>

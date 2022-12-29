@@ -8,6 +8,21 @@ const Navbar = () => {
   const router = useRouter();
   const isBreakpoint = useMediaQuery(980);
 
+  // set submenu dropdown
+  const [subMenu, setSubMenu] = useState(false);
+  const openSubMenu = () => {
+    setSubMenu(true);
+  };
+
+  const closeSubMenu = () => {
+    setSubMenu(false);
+  };
+
+  const handleSubmenuMobile = () => {
+    closeSubMenu(false);
+    changeStyle(false);
+  };
+
   // link styles
   const ActiveLink = `border-b-4 pb-[2px] border-secondary`;
   const LinkStyles = `mx-[.25vw] mb-0 my-4 lg:my-auto py-3 px-[2vw]`;
@@ -18,6 +33,21 @@ const Navbar = () => {
   const changeStyle = () => {
     setStyle(!style);
   };
+
+  const subMenuItems = [
+    {
+      link: "/portfolio/fashions",
+      name: "Fashion",
+    },
+    {
+      link: "/portfolio/products",
+      name: "Products",
+    },
+    {
+      link: "/portfolio/brandings",
+      name: "Branding",
+    },
+  ];
 
   return (
     <>
@@ -55,12 +85,12 @@ const Navbar = () => {
             <Link href="/">
               <a className="absolute right-4 top-4 lg:top-0 lg:hidden">
                 <img
-                  className="w-10 z-20"
-                  src="/logo-among-creatives-small.svg"
-                  alt="Among Creatives logo small"
+                  className="w-20 z-20"
+                  src="/logo-new-among-creatives.svg"
+                  alt="Among Creatives logo"
                   // placeholder="blurred"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={50}
                 />
               </a>
             </Link>
@@ -89,17 +119,42 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li onClick={changeStyle} className={LinkStyles}>
-                <Link href="/portfolio">
-                  <a
-                    className={
-                      router.pathname === "/portfolio" ? ActiveLink : null
-                    }
-                  >
-                    Portfolio
-                  </a>
-                </Link>
-              </li>
+              {subMenu ? (
+                <li onClick={handleSubmenuMobile} className={LinkStyles}>
+                  <Link href="/portfolio">
+                    <a
+                      className={
+                        router.pathname === "/portfolio" ? ActiveLink : null
+                      }
+                    >
+                      Portfolio
+                    </a>
+                  </Link>
+                  <ul className=" bg-white w-fit m-auto -mb-7 p-2">
+                    {subMenuItems.map((item, idx) => {
+                      return (
+                        <li
+                          key={idx}
+                          onClick={handleSubmenuMobile}
+                          className="mb-4 first-of-type:mt-2 text-sm font-bold"
+                        >
+                          <Link className="font-bold" href={item.link}>
+                            {item.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              ) : (
+                <li
+                  onClick={openSubMenu}
+                  className="mx-[.25vw] mb-0 my-4 lg:my-auto py-3 px-[2vw] text-lg cursor-pointer"
+                >
+                  Portfolio
+                </li>
+              )}
+
               <li onClick={changeStyle} className={LinkStyles}>
                 <Link href="/packages">
                   <a
@@ -124,13 +179,13 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li onClick={changeStyle} className={LinkStyles}>
+              {/* <li onClick={changeStyle} className={LinkStyles}>
                 <Link href="/book">
                   <a className="bg-accent py-3 px-8 shadow-softShadow">
                     Book now
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </>
@@ -179,7 +234,11 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                <li className={LinkStyles}>
+                <li
+                  onMouseOver={openSubMenu}
+                  onMouseLeave={closeSubMenu}
+                  className={`relative ${LinkStyles}`}
+                >
                   <Link href="/portfolio">
                     <a
                       className={
@@ -189,6 +248,17 @@ const Navbar = () => {
                       Portfolio
                     </a>
                   </Link>
+                  {subMenu ? (
+                    <ul className="-mt-[3px] absolute bg-white w-full shadow-softShadow p-2 border-t-4 border-t-secondary">
+                      {subMenuItems.map((item, idx) => {
+                        return (
+                          <li key={idx} className="mb-2 first-of-type:pt-2">
+                            <Link href={item.link}>{item.name}</Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : null}
                 </li>
 
                 {/* <ul className="mx-0 mb-0 my-4 lg:my-auto lg:mt-2 hidden lg:block">
@@ -228,14 +298,14 @@ const Navbar = () => {
                     </a>
                   </Link>
                 </li>
-
+                {/* 
                 <li className={LinkStyles}>
                   <Link href="/book">
                     <a className="bg-accent py-3 px-8 shadow-softShadow">
                       Book now
                     </a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

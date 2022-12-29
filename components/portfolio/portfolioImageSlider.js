@@ -32,7 +32,7 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                         // <Image key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
                         <Image
                           key={idx}
-                          priority={true}
+                          priority
                           src={`${portfolioImage.attributes.url}`}
                           alt={portfolioImage.attributes.alternativeText}
                           layout="responsive"

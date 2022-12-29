@@ -5,6 +5,7 @@ import AboutSectionHome from "../components/aboutSectionHome"
 import Banner from "../components/banner"
 import ImagesGridLayout from "../components/imagesGridLayout"
 import PackagesCarousel from "../components/packages/packagesCarousel"
+import Divider from '../components/divider'
 
 const Home: NextPage = () => {
     return (
@@ -15,8 +16,9 @@ const Home: NextPage = () => {
             <Banner>
                 By capturing bespoke and creative shots, I will tell the story of your product and get your audience to stop scrolling!
             </Banner>
-            <ImagesGridLayout />
-            <PackagesCarousel />
+            <Divider />
+            {/* <ImagesGridLayout /> */}
+            {/* <PackagesCarousel /> */}
 
         </div>
     )

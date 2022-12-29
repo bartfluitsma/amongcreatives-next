@@ -34,7 +34,7 @@ const AboutSectionAbout = () => {
           </div>
           <SecondaryButton link="/contact">Contact me</SecondaryButton>
         </div>
-        <div className="mt-10 md:w-5/12 md:p-8">
+        <div className="mt-10 md:w-5/12 md:p-8 -z-10">
           <Image
             className="mb-8 rounded-xl rounded-tr-[30%]"
             src="/Smiling product photographer Nass sitting outside.jpg"

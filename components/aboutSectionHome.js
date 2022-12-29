@@ -5,17 +5,33 @@ import SecondaryButton from "./secondaryButton";
 const AboutSectionHome = () => {
   return (
     <>
-      <div className="px-4 py-10 md:flex xl:px-40 md:items-center md:text-center md:justify-center">
-        <div className="md:w-6/12 md:p-10 md:grid md:place-items-center">
+      <div className="px-4 md:px-0 py-10 md:pt-20 md:pb-0 md:flex md:items-center ">
+        <div className="mt-10 md:w-1/2 ">
+          <Image
+            className=""
+            src="/homepage/woman-in-recycled-bikini-walking-on-the-beach.jpg"
+            alt="nass-product-photographer-working"
+            layout="responsive"
+            objectFit="contain"
+            width="100%"
+            loading="eager"
+            height="100"
+          />
+        </div>
+        <div className="md:w-6/12 md:p-10 bg-white md:-ml-20 z-10 md:max-w-2xl">
           <h2 className="text-4xl lg:text-3xl">
             Hi, I’m Nass, a Fashion and product photographer for sustainable and
-            conscious businesses.
+            conscious businesses. Based in Portugal, travelling between Bali and
+            Europe!
           </h2>
-          <Divider />
-          <p>
-            I love creating fresh, minimalistic and clear visuals that will
-            boost your sales and get your audience to stop scrolling!
-          </p>
+          {/* <Divider /> */}
+          <div className="flex my-7 lg:my-5 pl-2">
+            <div className="w-[10px] bg-secondary min-h-full my-4 mr-4"></div>
+            <p className="text-lg lg:text-3xl pr-4 lg:pr-0 font-Cormorant">
+              "I love creating fresh, minimalistic and clear visuals that will
+              boost your sales and get your audience to stop scrolling!"
+            </p>
+          </div>
           <p>
             I offer creative and thoughtful content that reflects your brand and
             tells your products' stories that set your customer expectation.
@@ -26,18 +42,6 @@ const AboutSectionHome = () => {
             I can’t wait to know more about your lovely business :)
           </p>
           <SecondaryButton link="/contact">Let's work together</SecondaryButton>
-        </div>
-        <div className="mt-10 md:w-5/12 md:p-8">
-          <Image
-            className="mb-8 rounded-xl rounded-tr-[30%]"
-            src="/homepage/nass-product-photographer-working.jpg"
-            alt="nass-product-photographer-working"
-            layout="responsive"
-            objectFit="cover"
-            width="100%"
-            loading="eager"
-            height="120vh"
-          />
         </div>
       </div>
     </>

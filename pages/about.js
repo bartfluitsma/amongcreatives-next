@@ -4,7 +4,7 @@ import PrimaryButton from "../components/primaryButton";
 import Banner from "../components/banner";
 import FAQ from "../components/faq";
 import { fetcher } from "../lib/api";
-import Head from 'next/head';
+import Head from "next/head";
 
 const AboutPage = ({ faqs }) => {
   return (
@@ -22,7 +22,7 @@ const AboutPage = ({ faqs }) => {
         <p className="mb-5 lg:mb-10">Want to know more?</p>
         <PrimaryButton link="/packages">See packages</PrimaryButton>
       </div>
-      <Banner>Frequently Asked Questions</Banner>
+      {/* <Banner>Frequently Asked Questions</Banner> */}
       <FAQ faqs={faqs} />
     </>
   );

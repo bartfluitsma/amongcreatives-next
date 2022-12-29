@@ -20,7 +20,7 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   return (
                     // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
                     <img
-                      priority={true}
+                      priority
                       className="row-span-2 col-span-2"
                       key={idx}
                       src={`${image.attributes.url}`}
@@ -34,7 +34,7 @@ const PortfolioGridBasicLayout = ({ data }) => {
                     // <img className='row-span-2 col-span-3' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
                     <img
                       className="row-span-2 col-span-3"
-                      priority={true}
+                      priority
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
@@ -46,7 +46,7 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   return (
                     // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
                     <img
-                      priority={true}
+                      priority
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
@@ -77,7 +77,7 @@ const PortfolioGridBasicLayout = ({ data }) => {
                     // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
                     <img
                       className="row-span-2 col-span-2"
-                      priority={true}
+                      priority
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
@@ -90,7 +90,7 @@ const PortfolioGridBasicLayout = ({ data }) => {
                     // <img className='row-span-2 col-span-2' key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
                     <img
                       className="row-span-2 col-span-2"
-                      priority={true}
+                      priority
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
@@ -102,7 +102,7 @@ const PortfolioGridBasicLayout = ({ data }) => {
                   return (
                     // <img key={idx} src={`${baseUrl}${image.attributes.url}`} alt={image.attributes.alternativeText} />
                     <img
-                      priority={true}
+                      priority
                       key={idx}
                       src={`${image.attributes.url}`}
                       alt={image.attributes.alternativeText}
