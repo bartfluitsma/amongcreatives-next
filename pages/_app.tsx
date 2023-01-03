@@ -4,13 +4,15 @@ import Layout from '../components/layout'
 import FullPageSpinner from '../components/fullPageSpinner'
 import Head from 'next/head'
 import Script from 'next/script'
+import Maintenance from '../components/maintenance'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  if (process.env.NEXT_PUBLIC_MAINTENANCE === 'true') {
+    return <Maintenance />;
+  }
   return (
     <>
-      {/* <FullPageSpinner /> */}
       <Head>
-
         <title>Among creatives | Fashion, lifestyle &amp; Product photography</title>
         <meta name='description' content='Fashion, lifestyle and product photographer for sustainable and conscious businesses worldwide.' />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -25,8 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', 'G-KL5ZHCWRSW');;
-  `,
+          gtag('config', 'G-KL5ZHCWRSW');;`,
         }}
       />
 
