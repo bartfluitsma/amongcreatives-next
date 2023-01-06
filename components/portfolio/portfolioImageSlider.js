@@ -2,11 +2,9 @@ import useMediaQuery from "../../helpers/breakpoints";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 
 const PortfolioImageSlider = ({ portfolioImages }) => {
   const isBreakpoint = useMediaQuery(768);
-  //   const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL_BASE;
 
   const settings = {
     infinite: true,
@@ -29,14 +27,11 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                 !isBreakpoint
                   ? image.attributes.DesktopImage.data.map((portfolioImage) => {
                       return (
-                        // <Image key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
-                        <Image
+                        <img
                           key={idx}
-                          priority
                           src={`${portfolioImage.attributes.url}`}
                           alt={portfolioImage.attributes.alternativeText}
                           layout="responsive"
-                          objectFit="cover"
                           width="100%"
                           loading="eager"
                           height="58vh"
@@ -45,13 +40,11 @@ const PortfolioImageSlider = ({ portfolioImages }) => {
                     })
                   : image.attributes.MobileImage.data.map((portfolioImage) => {
                       return (
-                        // <Image key={idx} src={`${baseUrl}${portfolioImage.attributes.url}`} alt={portfolioImage.attributes.alternativeText} />
-                        <Image
+                        <img
                           key={idx}
                           src={`${portfolioImage.attributes.url}`}
                           alt={portfolioImage.attributes.alternativeText}
                           layout="responsive"
-                          objectFit="cover"
                           width="100%"
                           loading="eager"
                           height="120vh"

@@ -6,6 +6,8 @@ import PortfolioGridBasicLayout from "../../../../components/portfolio/portfolio
 import PortfolioGridRandom from "../../../../components/portfolio/portfolioImagesGridRandom";
 import ClientPageSkeleton from "../../../../components/skeletons/clientPageSkeleton";
 import { useEffect, useState } from "react";
+import renderSEO from "../../../../helpers/SEOhelper";
+import Link from "next/link";
 
 export const getStaticPaths = async () => {
   const categoryPathResponse = await fetcher(
@@ -18,7 +20,6 @@ export const getStaticPaths = async () => {
       const category = path.attributes.path.toString().toLowerCase();
 
       return path.attributes.clients.map((client) => {
-        // const clientDetails = client.slug.toLowerCase().replace(/\s+/g, "-");
         const clientDetails = client.slug.toLowerCase().replace(/\s+/g, "-");
 
         return {
@@ -62,6 +63,8 @@ const ClientDetailsPage = ({ client }) => {
     }
   }, []);
 
+  // const SEOdescription = renderSEO(data);
+
   return (
     <>
       {loading ? (
@@ -70,9 +73,30 @@ const ClientDetailsPage = ({ client }) => {
         <>
           <Head>
             <title>Among creatives | {client && data.name}</title>
+            <meta name="description" content={renderSEO(data)} />
           </Head>
-          <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
+          <div className="m-auto text-center max-w-xl mt-12 mb-16">
+            <div className="flex text-sm justify-center">
+              <p className="flex justify-center align-middle items-center">
+                <Link href="/portfolio">
+                  <span className="text-base mr-2 text-primary hover:cursor-pointer">
+                    Portfolio{" "}
+                  </span>
+                </Link>{" "}
+                {` / ${data.name}`}
+              </p>
+            </div>
+            <p className="mt-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum vitae ullamcorper purus, eget ultrices justo.
+              Pellentesque blandit faucibus arcu at maximus. Phasellus posuere
+              ligula ante, ac semper neque scelerisque vitae.
+            </p>
+          </div>
+
+          <div className="flex px-4 mt-24 lg:mt-12 lg:px-20 ">
             <VerticalText>{client && data.name}</VerticalText>
+
             {data.randomImages ? (
               <PortfolioGridRandom data={data} />
             ) : (

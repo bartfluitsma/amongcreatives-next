@@ -21,7 +21,7 @@ const LatestWorkSectionHome = ({ category }) => {
         <PortfolioCategorySkeleton />
       ) : (
         <>
-          <div className="px-4 mt-24 lg:mt-12 lg:px-20">
+          <div className="px-4 mt-24 lg:px-20">
             <div>
               <h3 className="text-center pb-4">My latest work</h3>
             </div>

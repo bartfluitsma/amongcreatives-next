@@ -26,11 +26,7 @@ const InstagramCarousel = (props) => {
     slidesToShow: 6,
     slidesToScroll: 2,
     arrows: false,
-    // beforeChange: (current, next) => {
-    //   setImageIndex(next)
-    // },
     autoplay: false,
-    autoplaySpeed: 3000,
     dots: false,
     responsive: [
       {
@@ -39,10 +35,8 @@ const InstagramCarousel = (props) => {
           slidesToShow: 6,
           slidesToScroll: 2,
           infinite: true,
-          dots: false,
           swipeToSlide: true,
           autoplay: false,
-          autoplaySpeed: 3000,
         },
       },
       {
@@ -50,7 +44,6 @@ const InstagramCarousel = (props) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          dots: false,
           swipeToSlide: true,
         },
       },
@@ -59,11 +52,9 @@ const InstagramCarousel = (props) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          dots: false,
           swipeToSlide: true,
           arrows: false,
           centerMode: true,
-          // centerPadding: '29px 0px 0px',
         },
       },
     ],
@@ -82,16 +73,11 @@ const InstagramCarousel = (props) => {
             <Slider {...settings}>
               {images.data[0].attributes.images.data.map((image, idx) => {
                 return (
-                  <Image
+                  <img
                     key={idx}
                     className="h-full max-h-[25rem]"
                     src={`${image.attributes.url}`}
                     alt={image.attributes.alternativeText}
-                    width={"100%"}
-                    height={"120px"}
-                    layout="responsive"
-                    objectFit="cover"
-                    loading="eager"
                   />
                 );
               })}

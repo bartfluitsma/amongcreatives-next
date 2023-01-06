@@ -43,10 +43,10 @@ const Navbar = () => {
       link: "/portfolio/products",
       name: "Products",
     },
-    {
-      link: "/portfolio/brandings",
-      name: "Branding",
-    },
+    // {
+    //   link: "/portfolio/brandings",
+    //   name: "Branding",
+    // },
   ];
 
   return (
