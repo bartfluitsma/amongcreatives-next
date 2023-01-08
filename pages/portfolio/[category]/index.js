@@ -63,7 +63,7 @@ const CategoryOverviewPage = ({ category }) => {
                 {category && category.data[0].attributes.Category}
               </VerticalText>
             </div>
-            <div className="ml-auto grid grid-cols-[repeat(auto-fit,_minmax(250px,1fr))] gap-4 lg:gap-8 lg:ml-32 max-w-[82vw] ">
+            <div className="ml-auto grid grid-cols-[repeat(auto-fit,_minmax(150px,1fr))] pl-4 md:pl-0 sm:grid-cols-[repeat(auto-fit,_minmax(250px,1fr))] gap-4 lg:gap-8 lg:ml-32 max-w-[82vw] ">
               {category && <CategoryCard data={category.data} />}
             </div>
           </div>

@@ -1,6 +1,5 @@
 import { fetcher } from "../../../../lib/api";
 import VerticalText from "../../../../components/verticalText";
-import useMediaQuery from "../../../../helpers/breakpoints";
 import Head from "next/head";
 import PortfolioGridBasicLayout from "../../../../components/portfolio/portfolioImagesGridBase";
 import PortfolioGridRandom from "../../../../components/portfolio/portfolioImagesGridRandom";
@@ -8,6 +7,7 @@ import ClientPageSkeleton from "../../../../components/skeletons/clientPageSkele
 import { useEffect, useState } from "react";
 import renderSEO from "../../../../helpers/SEOhelper";
 import Link from "next/link";
+import renderDescription from "../../../../helpers/renderDescription";
 
 export const getStaticPaths = async () => {
   const categoryPathResponse = await fetcher(
@@ -47,11 +47,11 @@ export async function getStaticProps(context) {
   );
 
   return {
-    props: { client: data },
+    props: { client: data, category: category },
   };
 }
 
-const ClientDetailsPage = ({ client }) => {
+const ClientDetailsPage = ({ client, category }) => {
   const data = client && client.data[0].attributes.clients[0];
   const [loading, setLoading] = useState(true);
 
@@ -63,7 +63,11 @@ const ClientDetailsPage = ({ client }) => {
     }
   }, []);
 
-  // const SEOdescription = renderSEO(data);
+  // change category to fashion without 's', when fashion
+  let categoryLinkName = category;
+  if (category === "fashions") {
+    categoryLinkName = "fashion";
+  }
 
   return (
     <>
@@ -75,26 +79,27 @@ const ClientDetailsPage = ({ client }) => {
             <title>Among creatives | {client && data.name}</title>
             <meta name="description" content={renderSEO(data)} />
           </Head>
-          <div className="m-auto text-center max-w-xl mt-12 mb-16">
+          <div className="m-auto text-center max-w-xl mt-24 px-6 md:px-0 md:mt-12 mb-0 md:mb-16">
+            {console.log({ data })}
             <div className="flex text-sm justify-center">
               <p className="flex justify-center align-middle items-center">
                 <Link href="/portfolio">
-                  <span className="text-base mr-2 text-primary hover:cursor-pointer">
-                    Portfolio{" "}
+                  <span className="text-md  mr-2 text-primary hover:cursor-pointer">
+                    Portfolio /
                   </span>
                 </Link>{" "}
-                {` / ${data.name}`}
+                <Link href={`/portfolio/${category}`}>
+                  <span className="text-md mr-2 text-primary hover:cursor-pointer capitalize">
+                    {categoryLinkName} /
+                  </span>
+                </Link>{" "}
+                {` ${data.name}`}
               </p>
             </div>
-            <p className="mt-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vitae ullamcorper purus, eget ultrices justo.
-              Pellentesque blandit faucibus arcu at maximus. Phasellus posuere
-              ligula ante, ac semper neque scelerisque vitae.
-            </p>
+            <p className="mt-0">{renderDescription(data)}</p>
           </div>
 
-          <div className="flex px-4 mt-24 lg:mt-12 lg:px-20 ">
+          <div className="flex px-4 mt-10 md:mt-24 lg:mt-12 lg:px-20 ">
             <VerticalText>{client && data.name}</VerticalText>
 
             {data.randomImages ? (

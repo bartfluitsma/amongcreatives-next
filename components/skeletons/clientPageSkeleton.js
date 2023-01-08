@@ -3,6 +3,12 @@ import VerticalText from "../verticalText";
 const ClientPageSkeleton = () => {
   return (
     <>
+      <div className="mt-24 md:mt-20 px-6">
+        <div className="h-[15px] w-[300px] m-auto bg-gray-100"></div>
+        <div className="mt-4 mb-2 h-[22px] w-xl max-w-[480px] m-auto bg-gray-100"></div>
+        <div className="mb-2 h-[22px] w-xl max-w-[500px] m-auto bg-gray-100"></div>
+        <div className="h-[22px] w-xl max-w-[480px] m-auto bg-gray-100"></div>
+      </div>
       <div className="flex px-4 mt-24 lg:mt-12 lg:px-20 animate-pulse">
         <div>
           <div className="h-[300px] w-[40px] bg-gray-100"></div>

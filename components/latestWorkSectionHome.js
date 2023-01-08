@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PortfolioCategorySkeleton from "../components/skeletons/portfolioCategoryPage";
+import PortfolioCategorySkeletonHome from "../components/skeletons/portfolioCategoryPageHome";
 import Link from "next/link";
 import Image from "next/image";
 import SecondaryButton from "./secondaryButton";
@@ -18,7 +18,7 @@ const LatestWorkSectionHome = ({ category }) => {
   return (
     <>
       {loading ? (
-        <PortfolioCategorySkeleton />
+        <PortfolioCategorySkeletonHome />
       ) : (
         <>
           <div className="px-4 mt-24 lg:px-20">

@@ -14,7 +14,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Among creatives | Fashion, lifestyle &amp; Product photography</title>
-        <meta name='description' content='Fashion, lifestyle and product photographer for sustainable and conscious businesses worldwide.' />
+        <meta name='description' content='Fashion and Product Photography for Sustainable &
+          Ethical Brands. Contact me to book a shoot!' />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/icons/logo-among-creatives-small.svg" />
         <meta name='robots' content='index, follow' />

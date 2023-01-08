@@ -1,8 +1,3 @@
-import PortfolioImageSlider from "../portfolio/portfolioImageSlider";
-import PortfolioTitles from "../portfolio/portfolioTitles";
-import VerticalTitle from "../verticalTitle";
-import SkeletonCard from "./skeletonCard";
-
 const PortfolioTitlePageSkeleton = () => {
   return (
     <>

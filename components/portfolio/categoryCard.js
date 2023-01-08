@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CategoryCard = ({ data }) => {
-  // const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL_BASE;
-
   return (
     <>
       {data &&
@@ -12,15 +10,10 @@ const CategoryCard = ({ data }) => {
             <Link
               href={`${data[0].attributes.path.toString().toLowerCase()}/${
                 client.slug
-                // .toLowerCase()
-                // .replace(/\s+/g, "-")
               }`}
             >
               <div>
-                {/* {console.log('client slug', client.slug)} */}
                 <Image
-                  // key={i}
-                  // src={`${baseUrl}${client.thumbnail.data.attributes.url}`}
                   priority
                   src={`${client.thumbnail.data.attributes.url}`}
                   alt={client.thumbnail.data.attributes.alternativeText}

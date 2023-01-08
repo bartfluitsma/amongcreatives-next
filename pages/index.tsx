@@ -2,11 +2,9 @@ import type { NextPage } from "next";
 import HeroSectionHomepage from "../components/heroSectionHome";
 import AboutSectionHome from "../components/aboutSectionHome";
 import LatestWorkSectionHome from "../components/latestWorkSectionHome";
-import Banner from "../components/banner";
-import ImagesGridLayout from "../components/imagesGridLayout";
-import PackagesCarousel from "../components/packages/packagesCarousel";
 import Divider from "../components/divider";
 import { fetcher } from "../lib/api";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const categoryPropsResponse = await fetcher(
@@ -20,24 +18,26 @@ export async function getStaticProps() {
 
 const Home: NextPage = (category) => {
   return (
-    <div>
-      <HeroSectionHomepage />
-      <LatestWorkSectionHome category={category} />
-      {/* <Banner>
-        By capturing bespoke and creative shots, I will tell the story of your
-        product and get your audience to stop scrolling!
-      </Banner> */}
-      <div className="grid place-items-center mt-20">
-        <Divider />
-        <p className="font-Cormorant text-center text-3xl lg:text-[2rem] px-4 max-w-5xl">
-          By capturing bespoke and creative shots, I will tell the story of your
-          product and get your audience to stop scrolling!
-        </p>
+    <>
+      <Head>
+        <title>
+          Among creatives | Fashion & Product Photography for Sustainable &
+          Ethical Brands
+        </title>
+      </Head>
+      <div>
+        <HeroSectionHomepage />
+        <LatestWorkSectionHome category={category} />
+        <div className="grid place-items-center mt-20">
+          <Divider />
+          <p className="font-Cormorant text-center text-3xl lg:text-[2rem] px-4 max-w-5xl">
+            By capturing bespoke and creative shots, I will tell the story of
+            your product and get your audience to stop scrolling!
+          </p>
+        </div>
+        <AboutSectionHome />
       </div>
-      <AboutSectionHome />
-      {/* <ImagesGridLayout /> */}
-      {/* <PackagesCarousel /> */}
-    </div>
+    </>
   );
 };
 
