@@ -62,7 +62,7 @@ const LatestWorkSectionHomePortfolio = ({ category }) => {
                 )}
               </div>
             </div>
-            <div className="ml-auto mr-0 px-20 mt-6">
+            <div className="ml-auto mr-0 pl-4 md:pl-10 lg:pl-20 mt-6">
               <SecondaryButton link="/portfolio/fashions">
                 See more fashion
               </SecondaryButton>
