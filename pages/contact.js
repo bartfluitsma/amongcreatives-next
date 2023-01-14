@@ -1,6 +1,6 @@
-import Head from 'next/head';
+import Head from "next/head";
 import Link from "next/link";
-import ContactForm from '../components/forms/contactForm';
+import ContactForm from "../components/forms/contactForm";
 
 const ContactPage = () => {
   return (
@@ -19,12 +19,6 @@ const ContactPage = () => {
           >
             hello@amongcreatives.com.
           </a>
-        </p>
-        <p className="text-center">
-          For bookings, please{" "}
-          <Link href="/book">
-            <a className="border-b-4 border-secondary ">click here.</a>
-          </Link>
         </p>
       </div>
       <ContactForm />
