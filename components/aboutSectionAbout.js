@@ -21,7 +21,7 @@ const AboutSectionAbout = () => {
               <div className="w-[10px] bg-secondary min-h-full my-4 mr-4"></div>
               <p className="text-lg lg:text-3xl pr-4 lg:pr-0 font-Cormorant">
                 “My purpose is to help slow fashion, ethical, and conscious
-                business to thrive with compelling visuals and expand their
+                businesses to thrive with compelling visuals and expand their
                 message to as many customers as possible!”
               </p>
             </div>

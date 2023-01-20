@@ -17,16 +17,11 @@ const AboutPage = ({ faqs }) => {
         />
       </Head>
       <AboutSectionAbout />
-      <Divider />
-      <div className="grid place-items-center mb-20">
-        <p className="font-Cormorant text-center text-3xl lg:text-[2rem] px-4 max-w-5xl">
-          By capturing bespoke and creative shots, I will tell the story of your
-          product and get your audience to stop scrolling!
+      {/* <div className="">
+        <p className="text-[1.8em] lg:text-[2.2em] md:mb-6 leading-8 lg:leading-10 px-4 mb-10 mt-5 md:py-20 lg:py-16 md:text-center max-w-5xl md:m-auto font-Cormorant">
+          Frequently Asked Questions
         </p>
-        <p className="mb-5 lg:mb-10">Want to know more?</p>
-        <PrimaryButton link="/contact">Contact me</PrimaryButton>
-      </div>
-      {/* <Banner>Frequently Asked Questions</Banner> */}
+      </div> */}
       <FAQ faqs={faqs} />
     </>
   );
