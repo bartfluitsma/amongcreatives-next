@@ -26,7 +26,7 @@ const LatestWorkSectionHomePortfolio = ({ category }) => {
               <h2 className="[writing-mode:vertical-lr] [-webkit-writing-mode: vertical-lr] [-ms-writing-mode: vertical-lr] rotate-180 text-center absolute left-[2vw] xl:left-[7vw]">
                 {category && category.data[0].attributes.Category}
               </h2>
-              <div className="ml-auto grid grid-cols-[repeat(auto-fit,_minmax(220px,1fr))] gap-4 lg:gap-8 lg:ml-10">
+              <div className="ml-auto grid grid-cols-[repeat(auto-fit,_minmax(220px,1fr))] gap-4 lg:gap-8 lg:ml-10 pl-10">
                 {category.data.map((category) =>
                   category.attributes.clients.map((client, idx) =>
                     idx === 1 || idx === 2 || idx === 4 || idx === 6 ? (
@@ -62,7 +62,7 @@ const LatestWorkSectionHomePortfolio = ({ category }) => {
                 )}
               </div>
             </div>
-            <div className="ml-auto mr-0 pl-4 md:pl-10 lg:pl-20 mt-6">
+            <div className="mr-0 pl-4 ml-10 lg:pl-20 mt-6 ">
               <SecondaryButton link="/portfolio/fashions">
                 See more fashion
               </SecondaryButton>
@@ -74,7 +74,7 @@ const LatestWorkSectionHomePortfolio = ({ category }) => {
               <h2 className="[writing-mode:vertical-lr] [-webkit-writing-mode: vertical-lr] [-ms-writing-mode: vertical-lr] rotate-180 text-center absolute left-[2vw] xl:left-[7vw]">
                 {category && category.data[1].attributes.Category}
               </h2>
-              <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,0.22fr))] gap-4 lg:gap-8 pl-10">
+              <div className="grid grid-cols-[repeat(auto-fit,_minmax(220px,1fr))] md:grid-cols-[repeat(auto-fit,_minmax(220px,.47fr))] lg:grid-cols-[repeat(auto-fit,_minmax(200px,260px))] xl:grid-cols-[repeat(auto-fit,_minmax(200px,.23fr))] gap-4 lg:gap-8 pl-10 lg:pl-20 ">
                 {category.data[1].attributes.clients.map((client, idx) => (
                   <div key={idx} className="cursor-pointer self-end">
                     <Link
@@ -104,11 +104,6 @@ const LatestWorkSectionHomePortfolio = ({ category }) => {
                 ))}
               </div>
             </div>
-            {/* <div className="ml-auto mr-0 pr-10 mt-6 pl-20">
-              <SecondaryButton link="/portfolio/products">
-                View products portfolio
-              </SecondaryButton>
-            </div> */}
           </section>
         </>
       )}

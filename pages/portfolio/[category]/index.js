@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import CategoryCard from "../../../components/portfolio/categoryCard";
 import PortfolioCategorySkeleton from "../../../components/skeletons/portfolioCategoryPage";
@@ -57,7 +58,17 @@ const CategoryOverviewPage = ({ category }) => {
               {category && category.data[0].attributes.Category}
             </title>
           </Head>
-          <div className="flex px-4 mt-24 lg:mt-12 lg:px-20">
+          <div className="flex text-sm pl-4 lg:pl-24 mt-24 lg:mt-6">
+            <p className="flex justify-center align-middle items-center">
+              <Link href="/portfolio">
+                <span className="text-md  mr-2 text-primary hover:cursor-pointer">
+                  Portfolio /
+                </span>
+              </Link>{" "}
+              {category && category.data[0].attributes.Category}
+            </p>
+          </div>
+          <div className="flex px-4 mt-10 lg:px-20">
             <div>
               <VerticalText>
                 {category && category.data[0].attributes.Category}

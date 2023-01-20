@@ -11,6 +11,10 @@ const AboutPage = ({ faqs }) => {
     <>
       <Head>
         <title>Among creatives | about</title>
+        <meta
+          name="description"
+          content="I'm Nass, a Fashion, lifestyle and product photographer for sustainable and conscious businesses between Bali and Europe. I help wonderful brands to grow their online presence and visual identity."
+        />
       </Head>
       <AboutSectionAbout />
       <Divider />

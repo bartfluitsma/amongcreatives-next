@@ -7,6 +7,10 @@ const ContactPage = () => {
     <>
       <Head>
         <title>Among creatives | contact</title>
+        <meta
+          name="description"
+          content="I'm Nass, a sustainable fashion, lifestyle & product photographer. Let's elevate your brand's visual storytelling. Contact me to schedule your next shoot."
+        />
       </Head>
       <div className="grid place-items-center max-w-xl m-auto text-center mt-32 md:mt-10">
         <h1>Contact</h1>
@@ -17,7 +21,7 @@ const ContactPage = () => {
             className="border-b-4 border-secondary"
             href="mailto:hello@amongcreatives.com"
           >
-            hello@amongcreatives.com.
+            hello@amongcreatives.com
           </a>
         </p>
       </div>
