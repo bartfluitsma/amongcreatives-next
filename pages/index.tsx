@@ -30,10 +30,10 @@ const Home: NextPage = (category) => {
         <LatestWorkSectionHome category={category} />
         <div className="grid place-items-center mt-20">
           <Divider />
-          <p className="font-Cormorant text-center text-3xl lg:text-[2rem] px-4 max-w-5xl">
+          {/* <p className="font-Cormorant text-center text-3xl lg:text-[2rem] px-4 max-w-5xl">
             By capturing bespoke and creative shots, I will tell the story of
             your product and get your audience to stop scrolling!
-          </p>
+          </p> */}
         </div>
         <AboutSectionHome />
       </div>

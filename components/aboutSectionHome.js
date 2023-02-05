@@ -14,7 +14,6 @@ const AboutSectionHome = () => {
             layout="responsive"
             objectFit="contain"
             width="100%"
-            loading="eager"
             height="100"
           />
         </div>
